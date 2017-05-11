@@ -1,6 +1,6 @@
 class RepliesController < ApplicationController
   def new
-    
+    @reply = Reply.new
   end
 
   def create
@@ -22,6 +22,6 @@ class RepliesController < ApplicationController
     end
 
     def reply_params
-      params.require(:post).permit(:name, :email, :body, :comment_id)      
+      params.require(:reply).permit(:name, :email, :body, :comment_id)      
     end 
 end
