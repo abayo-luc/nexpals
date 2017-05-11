@@ -4,31 +4,42 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post
+    find_post
   end
 
   def new
-    
+    @post = Post.new
   end
 
   def create
     @post = Post.new(post_params)
     if @post.save
-      falsh[:success] = "Posted Created"
+      flash[:success] = "Posted Created"
+      redirect_to @post
+    else 
+      render 'new'
     end
   end
 
   def edit
-    @post
+    find_post
   end
 
   def update
-    @post = @post.update(post_params)
-    flash[:success] = "Post Edited"
+    find_post
+    if @post.update(post_params)
+      flash[:success] = "Post Edited"
+      redirect_to @post
+    else 
+      render 'edit'
+    end 
   end
 
   def destroy
+    find_post
     @post.destroy
+    flash[:warning] = "Post Deleted"
+    redirect_to posts_path
   end
 
   private
@@ -38,5 +49,12 @@ class PostsController < ApplicationController
 
     def post_params
       params.require(:post).permit(:title, :body, :intro)      
-    end  
+    end 
+     
+    def check_for_cancel
+      if params[:commit] = 'cancel'
+        redirect_back_or_default
+      end
+      
+    end
 end
