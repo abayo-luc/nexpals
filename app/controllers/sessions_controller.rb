@@ -5,14 +5,14 @@ class SessionsController < ApplicationController
   end
 
   def create
-    usern = Admin.find_by(email :params[:email])
-    if admin && admin.authenticate(params[:password])
+    admin = Admin.find_by(email: params[:email])
+    if admin && admin.authenticate(params[:password]) && admin.identity == params[:identity]
       session[:admin_id] = admin.id
       flash[:success] = "logged in!"
       redirect_to root_path
     else 
       flash[:warning] = "You don't belong here!"
-      redirect_to "/admin"
+      render :new
     end
   end
 

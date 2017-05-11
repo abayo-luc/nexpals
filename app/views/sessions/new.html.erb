@@ -1,15 +1,15 @@
 <h1>PLease Sign in </h1>
-<%= form_tag "/admin", method: :post do %>
-<div>
-  Email: <input type="email" name="email">
-</div>
-<div>
-Password: <input type="password" name="password">
-</div>
-<div>
-  ID: <input type="text" name="identity">
-</div>
-<div>
-  <input type="submit" value="Log in">
-</div>
+  <%= form_tag "/admin", method: :post do %>
+  <div>
+    Email: <input type="email" name="email">
+  </div>
+  <div>
+  Password: <input type="password" name="password">
+  </div>
+  <div>
+    ID: <input type="text" name="identity">
+  </div>
+  <div>
+    <input type="submit" value="Log in">
+  </div>
 <% end %>
