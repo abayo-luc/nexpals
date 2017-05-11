@@ -5,9 +5,10 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
+    
     if @comment.save
       flash[:success] = "Comment Posted"
-      render :new
+      redirect_to @comment.post
     end
   end
 

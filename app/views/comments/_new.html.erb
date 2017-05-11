@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <%= form_for :comment , url: {action: "create"} do |f| %>
+  <%= form_for(@comment, url: comments_new_path) do |f| %>
     <div class="form-group">
      <label for="inputEmail" class="col-lg-2 control-label">Name</label>
      <div class="col-lg-10">
@@ -29,12 +29,7 @@
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="inputEmail" class="col-lg-2 control-label">PostId</label>
-      <div class="col-lg-10">
-       <%=  f.text_field :post_id, class: "form-control", style: "width: 300px;"%><br>
-      </div>
-    </div>
+    <%= f.hidden_field :post_id, value: @post.id  %>
 
     <div class="form-group">
      <div class="col-lg-10 col-lg-offset-2">

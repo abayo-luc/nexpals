@@ -24,7 +24,17 @@
         </div>
     </div>
 
+
+    <% @post.comments.each do |comment| %>
+      <h6><%= comment.name %></h6>
+      <p><%= comment.body %></p>
+    <% end %>
+
+
+
     <%= render "comments/new" %>
+
+    
   </body>
 </html>
 
