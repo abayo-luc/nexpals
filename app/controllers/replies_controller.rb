@@ -1,6 +1,6 @@
 class RepliesController < ApplicationController
   def new
-    
+    @reply = Reply.new
   end
 
   def create
