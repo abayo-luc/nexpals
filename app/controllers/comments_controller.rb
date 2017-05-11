@@ -1,18 +1,21 @@
 class CommentsController < ApplicationController
   def new
-    
+    @comment = Comment.new
   end
 
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
       flash[:success] = "Comment Posted"
+      render :new
     end
   end
 
   def destroy
-    @comment.destroy
-    flash[:warning] = "comment Deleted"
+    if @comment.destroy
+      flash[:warning] = "comment Deleted"
+      render :new
+    end
   end
    private
     def find_comment
@@ -20,6 +23,6 @@ class CommentsController < ApplicationController
     end
 
     def comment_params
-      params.require(:post).permit(:name, :email, :web, :body, :post_id)      
+      params.require(:comment).permit(:name, :email, :web, :body, :post_id)    
     end 
 end
