@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   def show
     find_post
     @comment = Comment.new
+    @reply = Reply.new
   end
 
   def new
