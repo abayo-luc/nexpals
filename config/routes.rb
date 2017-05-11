@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :comments
 
   resources :replies
+  resources :admins, only: [:index, :show, :edit, :update]
 end
