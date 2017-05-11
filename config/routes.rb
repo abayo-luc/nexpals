@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get "/admin", to: 'sessions#new'
   post "/admin", to: 'sessions#create'
   delete "/admin_out", to: 'sessions#destroy'
+  resources :admins, only: [:index, :show, :edit, :update]
 end
