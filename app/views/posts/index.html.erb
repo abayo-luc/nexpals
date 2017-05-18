@@ -3,8 +3,8 @@
     <div class="col-md-08">
     <p class="text-center"><%= link_to "New Post", new_post_path %></p> 
           <% @posts.each do |post| %>
-            <h2><%= link_to post.title, post%></h2>
-            <p><%= truncate post.body.html_safe, length: 250 %> | <%= link_to 'Read More', post %></p>
+            <h2 style="font-family: cursive; font-size: 16px;"><%= link_to post.title, post%></h2>
+            <p style="font-family: cursive; font-style: italic; font-size: 12px;"><%= truncate post.intro.html_safe, length: 20%> | <%= link_to 'Read More', post %></p>
             <p><%= post.created_at.strftime("%B, %d, %Y") %></p>
           <% end %>
     </div>
