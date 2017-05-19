@@ -1,0 +1,11 @@
+<%= form_for @question do |f| %>
+  <%=f.label :subject %>
+  <%=f.text_field :subject %>
+  <%=f.label :number %>
+  <%=f.text_field :number %>
+  <%=f.label :email %>
+  <%=f.text_field :email %>
+  <%=f.label :phone %>
+  <%=f.text_field :phone %>
+  <%=f.cktext_flied :body %>
+<% end %>
