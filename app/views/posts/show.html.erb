@@ -5,34 +5,39 @@
   </head>
   <body>
     <div class="container">
-      <h3 class="title">
+      <h3 class="title" style="font-family: cursive; font-size: 20px;">
         <%= @post.title %>
       </h3>
       <p class="date">
       <%= Time.at(@post.created_at).strftime("%B %e, %Y") %>
       | <%= link_to 'Edit', edit_post_path(@post) %>
       | <%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'} %>
+       <span class="glyphicon glyphicon-comment" aria-hidden="true" style="padding-left:30px; font-size:30px;" title="comment"><%= @post.comments.count %></span>
       </p>
       <div class="row"></div>
         <div class="col-md-10">
+        <p style="font-family: cursive; font-style: italic; font-size: 12px;">
           <%= @post.intro %>
+          
+        
+        </p>
         <hr>
           <p class="body">
-            <%= @post.body %>
+            <%= @post.body.html_safe %>
           </p>
+          <hr>
+          <% @post.comments.each do |comment| %>
+            <h6 style="font-size: 20px; font-family: cursive; color: rgb(6, 34, 104)"><%= comment.name %></h6>
+            <p><%= comment.body %></p>
+          <% end %>
+
+
+
+          <%= render "comments/new" %>
   
         </div>
     </div>
 
-
-    <% @post.comments.each do |comment| %>
-      <h6><%= comment.name %></h6>
-      <p><%= comment.body %></p>
-    <% end %>
-
-
-
-    <%= render "comments/new" %>
 
     
   </body>
