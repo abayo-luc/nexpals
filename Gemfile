@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.0.2'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'paperclip', '~> 5.1'
+gem 'impressionist', '~> 1.5', '>= 1.5.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
