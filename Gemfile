@@ -64,3 +64,6 @@ gem 'bootswatch-rails'
 #pagination
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
+
+#social media share
+gem 'social-share-button'

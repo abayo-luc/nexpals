@@ -28,6 +28,8 @@
             <%= @post.body.html_safe %>
           </p>
           <hr>
+          <%= social_share_button_tag("#{@post.title}") %>
+          <hr>
           <% @post.comments.each do |comment| %>
             <h6 style="font-size: 20px; font-family: cursive; color: rgb(6, 34, 104)"><%= comment.name %></h6>
             <p><%= comment.body %></p>
@@ -40,8 +42,6 @@
         </div>
     </div>
 
-
-    
   </body>
 </html>
 
