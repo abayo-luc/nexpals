@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  def questions
+  def index
     @questions = Question.all
   end
   def show
@@ -12,6 +12,9 @@ class QuestionsController < ApplicationController
     question = Question.new(quesiton_params)
     if question.save
       flash[:success] = "Question was successfully sent"
+      redirect_to "/questions/#{question.id}"
+    else
+      render :new
     end
   end
   def edit
@@ -21,6 +24,7 @@ class QuestionsController < ApplicationController
     find_question
       if @question.update(quesiton_params)
         flash[:success] = "Question edited"
+        redirect_to "/questions/#{@question.id}"
       end
   end
   def destroy
@@ -35,6 +39,6 @@ class QuestionsController < ApplicationController
       @question = Question.find_by(id: params[:id]) 
     end
     def quesiton_params
-      params.require(:question).permit(:name, :email, :body, :phone, :web)
+      params.require(:question).permit(:name, :email, :body, :phone, :web, :subject)
     end
 end
