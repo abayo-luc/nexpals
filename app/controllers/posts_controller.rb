@@ -2,7 +2,7 @@ class PostsController < ApplicationController
    impressionist actions: [:show], unique: [:session_hash]
    
   def index
-    @posts = Post.paginate(:page => params[:page], :per_page => 3).order(created_at: "DESC")
+    @posts = Post.paginate(:page => params[:page], :per_page => 4).order(created_at: "DESC")
   end
 
   def show
