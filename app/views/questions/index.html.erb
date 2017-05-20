@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <% @questions.each do |question| %>
+    <strong>Subject:</strong><a href="/questions/<%= question.id %>"><%= question.subject %></a>
+    <br>
+    <strong>From:</strong><%= question.name %>
+    <br>
+    <strong>Email:</strong> <%= question.email %>
+    <br>
+    <%= question.body.html_safe %> 
+    <br>
+    <div class="eamil-signature"> 
+    <strong>Phone: </strong><%= question.phone %><br>
+    <strong>Web:</strong><a href="<%= question.web %>"><%= question.web %></a>  
+    </div> 
+    <a href="#" role="button" title="reply"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></a>
+    <br>
+  <% end %>
+</div>

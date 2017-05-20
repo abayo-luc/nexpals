@@ -1,0 +1,15 @@
+  <div class="container-fluid">
+    <strong>Subject:</strong> <%= @question.subject %>
+    <br>
+    <strong>From:</strong><%= @question.name %>
+    <br>
+    <strong>Email:</strong> <%= @question.email %>
+    <br>
+    <br>
+    <%= @question.body.html_safe %> 
+    <br>
+    <div class="eamil-signature"> 
+    <strong>Phone: </strong><%= @question.phone %><br>
+    <strong>Web:</strong><a href="<%= @question.web %>"><%= @question.web %></a>  
+    </div> 
+  </div>

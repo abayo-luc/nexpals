@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <%= javascript_include_tag Ckeditor.cdn_url %>
+  <%= form_for @question do |f| %>
+    <%=f.label :name %>
+    <%=f.text_field :name %>
+    <%=f.label :subject %>
+    <%=f.text_field :subject %>
+    <%=f.label :web %>
+    <%=f.text_field :web %>
+    <%=f.label :email %>
+    <%=f.text_field :email %>
+    <%=f.label :phone %>
+    <%=f.text_field :phone %>
+    <br>
+    <br>
+    <%=f.cktext_area :body, :class => 'ckeditor'%>
+    <%= f.submit %>
+  <% end %>
+</div>
