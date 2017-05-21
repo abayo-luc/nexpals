@@ -22,9 +22,10 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="inputEmail" class="col-lg-2 control-label">Comment</label>
+
+      <label for="inputEmail" class="col-lg-2 control-label" class="emoji-picker-container">Comment</label>
       <div class="col-lg-10">
-       <%=  f.text_area :body, class: "form-control", style: "width: 300px;"%><br>
+       <%=  f.text_area :body, class: "form-control", style: "width: 300px;",  data: { emojiable: true }%><br>
       </div>
     </div>
 

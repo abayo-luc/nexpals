@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  
    impressionist actions: [:show], unique: [:session_hash]
    
   def index

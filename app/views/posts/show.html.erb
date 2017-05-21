@@ -32,7 +32,8 @@
           <hr>
           <% @post.comments.each do |comment| %>
             <h6 style="font-size: 20px; font-family: cursive; color: rgb(6, 34, 104)"><%= comment.name %></h6>
-            <p><%= comment.body %></p>
+            <p><%= content_with_emoji("#{comment.body}").html_safe %></p>
+            
           <% end %>
 
 

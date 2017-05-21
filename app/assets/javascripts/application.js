@@ -15,5 +15,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require social-share-button
+//= require rails_emoji_picker
 //= require_tree .
 //= require ckeditor/init
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    setTimeout(function(){
+    $('#flash').fadeOut();
+    }, 4000);
+  })
+</script>
