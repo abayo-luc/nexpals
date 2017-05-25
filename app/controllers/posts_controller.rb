@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-   impressionist actions: [:show], unique: [:session_hash]
+   # impressionist actions: [:show], unique: [:session_hash]
    
   def index
     @posts = Post.paginate(:page => params[:page], :per_page => 4).order(created_at: "DESC")
@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     @comment = Comment.new
     @reply = Reply.new
 
-    impressionist(@post)
+    # impressionist(@post)
   end
 
   def new
@@ -50,7 +50,7 @@ class PostsController < ApplicationController
 
   private
     def find_post
-      @post = Post.find_by(id: params[:id])       
+      @post = Post.friendly.find(params[:id])
     end
 
     def post_params
