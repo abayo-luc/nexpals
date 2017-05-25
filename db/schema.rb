@@ -85,6 +85,14 @@ ActiveRecord::Schema.define(version: 20170525131441) do
     t.index ["user_id"], name: "index_impressions_on_user_id", using: :btree
   end
 
+  create_table "news_letters", force: :cascade do |t|
+    t.string   "email"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.boolean  "email_confirmed", default: false
+    t.string   "confirm_token"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
