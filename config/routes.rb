@@ -13,4 +13,9 @@ Rails.application.routes.draw do
   resources :admins, only: [:index, :show, :edit, :update]
 
   resources :questions
+  resources :news_letters do 
+    member do 
+      get :confirm_email
+    end
+  end
 end
