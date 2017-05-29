@@ -12,10 +12,12 @@
       <%= Time.at(@post.created_at).strftime("%B %e, %Y") %>
       | <%= link_to 'Edit', edit_post_path(@post) %>
       | <%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'} %>
+      |Tags: <%= raw tag_links(@post.all_tags) %>
+
        <span class="glyphicon glyphicon-comment" aria-hidden="true" style="padding-left:30px; font-size:30px;" title="comment"><%= @post.comments.count %></span>
 
         <!-- <span style="padding-left: 30px;"><%#= "#{@post.impressionist_count} views so far!" %></span> -->
-      </p>
+       
       <div class="row"></div>
         <div class="col-md-10">
         <p style="font-family: cursive; font-style: italic; font-size: 12px;">
