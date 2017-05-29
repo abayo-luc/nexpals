@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
    # impressionist actions: [:show], unique: [:session_hash]
+   before_action :authenticate_admin, only:[:new, :create, :edit, :destroy]
    
   def index
     if params[:tag]

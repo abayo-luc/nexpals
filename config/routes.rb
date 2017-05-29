@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   resources :admins, only: [:index, :show, :edit, :update]
 
   resources :questions
+  post "/question_reply", to: 'questions#reply'
+
   resources :news_letters do 
     member do 
       get :confirm_email

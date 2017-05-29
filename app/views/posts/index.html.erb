@@ -1,7 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-9">
+      <% if current_admin %>
       <p class="text-center"><%= link_to "New Post", new_post_path %></p> 
+      <%= link_to "Logout", "/admin_out", :method => :delete %>
+      <% end %>
       <% @posts.each do |post| %>
         <h2 style="font-family: cursive; font-size: 20px;"><%= link_to post.title, post%></h2>
         <p style="font-family: cursive; font-style: italic; font-size: 16px;"><%= truncate post.intro.html_safe, length: 350%> | <%= link_to 'Read More', post %></p>
