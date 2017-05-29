@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Nexpals</title>
-    <%= csrf_meta_tags %>
+<div class="home-background">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> 
-</head>
-
-<body>
-
-
-  <% unless controller.controller_name == "home" && controller.controller_path=="home" %>
-
-
-  <!-- Nex Webstore -->
+<!-- Nex Webstore -->
 
   <!-- Trigger the modal with a button -->
   <button  type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-left: 40px; margin-top: 5px; padding: 0px;  background-color:transparent; border-color: transparent; height: 30px;" title="Nex WebStore">
@@ -183,79 +168,17 @@
 </div>
 
 
-<!-- navbar -->
-<ul class="nav navbar-nav navbar-right">
+  <div class="nav navbar-nav navbar-right" style="margin-top: 150px;">     
+   
+   <nav> <ul>
 
-  <li><a href="/" class="glyphicon glyphicon-home white" title="home"></a></li>
-  <li><a href="/updates" class="white" title="Updates">Updates</a></li>
-  <li><a href="/services" class="white" title="Services">Services</a></li>
-  <li><a href="/projects" class="white" title="Projects">Projects</a></li>
-  <li><a href="/team" class="white" title="Team">Team</a></li>
-  <li><a href="/contactus" class="white" title="Contact Us">Contact Us</a></li>
-  <li><a href="/aboutus" class="white" title="About Us">About Us </a></li>
+    <li> <a href="/updates" class="btn corner-2" style="margin-bottom:15px;width: 200px;border-radius: 20%; ">Updates</a></li>
+    <li> <a href="/projects" class="btn corner-3" style="margin-bottom:15px;width: 200px;border-radius: 20%;">Projects</a></li>
+    <li> <a href="/services" class="btn corner-1" style="margin-bottom:15px;width: 200px;border-radius: 20%;">Services</a></li>
+    <li> <a href="/aboutus" class="btn corner-2" style="margin-bottom:15px;width: 200px;border-radius: 20%;">About Us</a></li>
+    <li> <a href="/contactus" class="btn corner-3" style="margin-bottom:15px;width: 200px;border-radius: 20%;">Contact Us</a></li>
 
-</ul>
+    </ul> </nav>
+  </div> 
 
-
-<div class="container-fluid">
-
-    <p>
-      <% flash.each do |key, value| %>
-      <% alert_class = case key
-      when :notice then "success"
-      when :alert then "danger"
-      else key
-       end %>
-       <%= content_tag :div, class: "alert alert-#{alert_class}" do %>
-       <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-       <%= value %>
-       <% end %>
-       <% end %>
-    </p>
 </div>
-
-    <%= yield %>
-    <%= render "news_letters/form" %>
-    <!-- footer -->
-
-<% unless controller.controller_name == "home" && controller.controller_path=="home" %>
-
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<footer>
-
-  <div class="footer" style="background-color: #008080; padding-bottom: 0px;">
-    <div class="container-fluid">
-      <div class="row">
-
-        <!-- <div class="footer-bottom"> -->
-        <div class="col-md-4 bottom-features">                  
-          <a href="/faq" class="black col-md-6" style="color: white;">FAQs</a>
-          <a href="/testimony" class="black col-md-6" style="color: white;">Reviews</a>
-        </div> 
-
-
-        <div class="col-md-4">
-
-            <ul class="social">
-              <li> <a href="#"> <i class="fa fa-envelope-square fa-3x social">   </i> </a> </li>
-              <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
-              <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
-              <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
-              <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
-            </ul>
-
-        </div>
-
-        <div class="col-md-4 bottom-features">
-          <p style="color: white;"> ©NexPals 2017. All right reserved</p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</footer>
-
-<% end %>
-
-  </body>
-</html>

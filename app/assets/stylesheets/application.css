@@ -20,3 +20,357 @@
    height: 25px;
    background: url("/social/facebook.png") no-repeat;
  }
+
+
+
+ html, body { 
+background-color: #008080;
+padding-left: 1px;
+padding-right: 1px;
+padding-top: 1px;
+padding-bottom: 80px; 
+height: 100%;
+font-family: 'Quicksand', sans-serif;
+}
+img {
+  height:200px;
+  width: 200px;
+ }
+
+
+.faq-background{
+  background-image: url('ask.jpg');
+ /* background-repeat: no-repeat;*/
+ height: 350px;
+ width: 100%;
+}
+
+.aboutus-background{
+  background-image: url('aboutus.jpg');
+ /* background-repeat: no-repeat;*/
+ height: 350px;
+ width: 100%;
+}
+
+.contactus-background{
+  background-image: url('contactus.jpg');
+ /* background-repeat: no-repeat;*/
+ height: 300px;
+ width: 100%;
+}
+
+
+
+
+
+
+footer {
+   /*position:fixed;*/
+   left:0px;
+   bottom:15px;
+   height:50px;
+   width:100%;
+}
+.bottom-features{
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+/*navbar symbols*/
+
+.white, .white a {
+  color: #fff;
+}
+
+
+
+.sessions_background{
+  background-image: url('login.jpg');
+}
+
+
+ .full {
+    width: 100%;    
+}
+.gap {
+  height: 30px;
+  width: 100%;
+  clear: both;
+  display: block;
+}
+.footer {
+  /*background: #EDEFF1;*/
+  height: auto;
+  padding-bottom: 30px;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #CCCCCC;
+  /*border-top: 1px solid #DDDDDD;*/
+}
+.footer p {
+  margin: 0;
+}
+.footer img {
+  max-width: 100%;
+}
+.footer h3 {
+  border-bottom: 1px solid #BAC1C8;
+  color: #54697E;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  padding: 40px 0 10px;
+  text-transform: uppercase;
+}
+.footer ul {
+  font-size: 13px;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 15px;
+  color: #7F8C8D;
+}
+.footer ul li a {
+  padding: 0 0 5px 0;
+  display: block;
+}
+.footer a {
+  color: #78828D
+}
+.supportLi h4 {
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: normal;
+  margin-bottom: 0 !important;
+  padding-bottom: 0;
+}
+.newsletter-box input#appendedInputButton {
+  background: #FFFFFF;
+  display: inline-block;
+  float: left;
+  height: 30px;
+  clear: both;
+  width: 100%;
+}
+.newsletter-box .btn {
+  border: medium none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  height: 40px;
+  padding: 0;
+  width: 100%;
+  color: #fff;
+}
+.newsletter-box {
+  overflow: hidden;
+}
+.bg-gray {
+  background-image: -moz-linear-gradient(center bottom, #BBBBBB 0%, #F0F0F0 100%);
+  box-shadow: 0 1px 0 #B4B3B3;
+}
+.social li {
+  background: none repeat scroll 0 0 #B5B5B5;
+  border: 2px solid #B5B5B5;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+  height: 36px;
+  line-height: 36px;
+  margin: 0 8px 0 0;
+  padding: 0;
+  text-align: center;
+  width: 36px;
+  transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+}
+.social li:hover {
+  transform: scale(1.15) rotate(360deg);
+  -webkit-transform: scale(1.1) rotate(360deg);
+  -moz-transform: scale(1.1) rotate(360deg);
+  -ms-transform: scale(1.1) rotate(360deg);
+  -o-transform: scale(1.1) rotate(360deg);
+}
+.social li a {
+  color: #EDEFF1;
+}
+.social li:hover {
+  border: 2px solid #2c3e50;
+  background: #2c3e50;
+}
+.social li a i {
+  font-size: 16px;
+  margin: 0 0 0 5px;
+  color: #EDEFF1 !important;
+}
+.footer-bottom {
+  background: #E3E3E3;
+  border-top: 1px solid #DDDDDD;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.footer-bottom p.pull-left {
+  padding-top: 6px;
+}
+.payments {
+  font-size: 1.5em; 
+}
+
+
+
+.post-title-font {
+  font-family: 'Josefin Slab', serif;
+  }
+
+
+/*navbar*/
+
+.navbar-xs { min-height:22px; border-radius:0} 
+.navbar-xs .navbar-brand{ padding: 2px 8px;font-size: 14px;line-height: 14px; } 
+.navbar-xs .navbar-nav > li > a { border-right:1px solid #ddd; padding-top: 2px; padding-bottom: 2px; line-height: 16px }
+
+
+
+
+.home-background {
+  background-image: url('computer.jpg');
+  // background-color: #008080;
+  height: 138%;
+  width: 100%;
+  // opacity: 0.7;
+  // filter: blur(4px);
+  background-attachment: fixed;
+}
+
+
+
+
+=================== */
+
+@mixin corners($shape, $size, $color) {
+ 
+  $n1: $size+px;
+  $n2: ($size)*2+px;
+  $n3: $size+1+px;
+  $pn: 0%;
+  @if ($size <= 10) { $pn: 6%; }
+  @elseif ($size <= 15) { $pn: 5%; }
+  @elseif ($size <= 20) { $pn: 4%; }
+  @elseif ($size <= 40) { $pn: 3%; }
+  @elseif ($size <= 50) { $pn: 2%; }
+  @elseif ($size <= 60) { $pn: 1%; }
+  $pd-scoop: 64%+$pn;
+  
+  @if ($shape == "bevel") {
+    background: $color;
+    background:
+          linear-gradient(to right , $color 0, $color 100%) no-repeat top center,
+          linear-gradient(to bottom, $color 0, $color 100%) no-repeat center left,
+          linear-gradient(135deg,  transparent 49%, $color 50% ) no-repeat top left,
+          linear-gradient(-135deg, transparent 47%, $color 48% ) no-repeat top right,
+          linear-gradient(45deg,   transparent 47%, $color 48% ) no-repeat bottom left,
+          linear-gradient(-45deg,  transparent 46%, $color 47% ) no-repeat bottom right;
+    background-size: calc(100% - #{$n2}) 100%, 100% calc(100% - #{$n2}), $n3 $n3, $n3 $n3, $n3 $n3, $n3 $n3;
+  }
+  
+  @if ($shape == "scoop") {
+    $t-t: t t; // compiler bug hack
+    $t-b: t b; // compiler bug hack
+    background: $color;
+    background:
+          linear-gradient(to right , $color 0, $color 100%) no-repeat top center,
+          linear-gradient(to bottom, $color 0, $color 100%) no-repeat center left,
+          radial-gradient(a+$t-t+op left,     transparent 64%, $color $pd-scoop ) no-repeat top left,
+          radial-gradient(a+$t-t+op right,    transparent 64%, $color $pd-scoop ) no-repeat top right,
+          radial-gradient(a+$t-b+ottom left,  transparent 64%, $color $pd-scoop ) no-repeat bottom left,
+          radial-gradient(a+$t-b+ottom right, transparent 64%, $color $pd-scoop ) no-repeat bottom right;
+    background-size: calc(100% - #{$n2}) 100%, 100% calc(100% - #{$n2}), $n3 $n3, $n3 $n3, $n3 $n3, $n3 $n3;
+  }
+  
+  @if ($shape == "notch") {
+    background: $color;
+    background:
+          linear-gradient(to right , $color 0, $color 100%) no-repeat top center,
+          linear-gradient(to bottom, $color 0, $color 100%) no-repeat center left;
+    background-size: calc(100% - #{$n2}) 100%, 100% calc(100% - #{$n2});
+  }
+  
+}
+
+.corner-1 {
+  transition: all 0.3s;
+  @include corners('scoop', 10, #770000);
+  &:after {
+    transition: all 0.3s;
+    @include corners('scoop', 10, #330000);
+  }
+  &:hover {
+    @include corners('scoop', 27, #990000);
+    &:after { @include corners('scoop', 27, #330000); }
+  }
+}
+
+.corner-2 {
+  transition: all 0.3s;
+  @include corners('bevel', 16, #007700);
+  &:after {
+    transition: all 0.3s;
+    @include corners('bevel', 16, #003300);
+  }
+  &:hover {
+    @include corners('bevel', 40, #009900);
+    &:after { @include corners('bevel', 40, #003300); }
+  }
+}
+
+.corner-3 {
+  transition: all 0.3s;
+  @include corners('notch', 5, #0055cc);
+  &:after {
+    transition: all 0.3s;
+    @include corners('notch', 5, #002266);
+  }
+  &:hover {
+    @include corners('notch', 15, #0077ee);
+    &:after { @include corners('notch', 15, #002266); }
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 20px 30px 16px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 4px;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+nav {
+  position: absolute;
+  left: 0;
+  // top: 50%;
+  // margin-top: -40px;
+  width: 100%;
+  text-align: center;
+}
+
