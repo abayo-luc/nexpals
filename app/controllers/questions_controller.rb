@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+  before_action :authenticate_admin, only:[:destroy, :index, :show, :destroy, :update, :edit]
   def index
     @questions = Question.all
   end
@@ -9,10 +10,10 @@ class QuestionsController < ApplicationController
     @question = Question.new
   end
   def create
-    question = Question.new(quesiton_params)
+    question = Question.new(question_params)
     if question.save
       flash[:success] = "Question was successfully sent"
-      redirect_to "/questions/#{question.id}"
+      redirect_to "/"
     else
       render :new
     end
@@ -22,8 +23,10 @@ class QuestionsController < ApplicationController
   end
   def update
     find_question
-      if @question.update(quesiton_params)
-        flash[:success] = "Question edited"
+      if @question.update(question_params)
+        @question.change_reply_status
+        QuestionMailer.question_reply(@question).deliver_now
+        flash[:success] = "Question Replied"
         redirect_to "/questions/#{@question.id}"
       end
   end
@@ -31,6 +34,7 @@ class QuestionsController < ApplicationController
     find_question
     if @question.destroy
     flash[:warning] ="Question deleted"
+    redirect_to "/questions"
     end
   end
 
@@ -38,7 +42,7 @@ class QuestionsController < ApplicationController
     def find_question
       @question = Question.find_by(id: params[:id]) 
     end
-    def quesiton_params
-      params.require(:question).permit(:name, :email, :body, :phone, :web, :subject)
+    def question_params
+      params.require(:question).permit(:name, :email, :body, :phone, :web, :subject, :reply)
     end
 end

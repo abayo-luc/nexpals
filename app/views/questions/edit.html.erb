@@ -1,3 +1,23 @@
 <div class="container-fluid">
-  <%= render "form" %>
+
+    <strong>Subject:</strong> <%= @question.subject %>
+    <br>
+    <strong>From:</strong><%= @question.name %>
+    <br>
+    <strong>Email:</strong> <%= @question.email %>
+    <br>
+    <br>
+    <%= @question.body.html_safe %> 
+    <br>
+    <div class="eamil-signature"> 
+    <strong>Phone: </strong><%= @question.phone %><br>
+    <strong>Web:</strong><a href="<%= @question.web %>"><%= @question.web %></a>  
+    </div> 
+ 
+
+  <%= javascript_include_tag Ckeditor.cdn_url %>
+  <%= form_for @question do |f|%>
+    <%=f.cktext_area :reply, :class => 'ckeditor'%>
+    <%= f.submit %>
+  <% end %>
 </div>

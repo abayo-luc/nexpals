@@ -12,7 +12,7 @@
     <strong>Phone: </strong><%= question.phone %><br>
     <strong>Web:</strong><a href="<%= question.web %>"><%= question.web %></a>  
     </div> 
-    <a href="www.gamil.com" role="button" title="reply"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></a>
+    <a href="/questions/<%= question.id %>/edit" role="button" title="reply"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></a> <span><%= link_to "Delete", question, :method => :delete %></span>
     <br>
   <% end %>
 </div>
