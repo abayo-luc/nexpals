@@ -2,7 +2,11 @@ class PostsController < ApplicationController
    # impressionist actions: [:show], unique: [:session_hash]
    
   def index
-    @posts = Post.paginate(:page => params[:page], :per_page => 4).order(created_at: "DESC")
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag])
+    else
+      @posts = Post.paginate(:page => params[:page], :per_page => 4).order(created_at: "DESC")
+    end
   end
 
   def show
@@ -54,7 +58,7 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :body, :intro)      
+      params.require(:post).permit(:title, :body, :intro, :all_tags)      
     end 
      
     def check_for_cancel

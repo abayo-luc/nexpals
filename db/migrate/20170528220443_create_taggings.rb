@@ -1,8 +1,8 @@
 class CreateTaggings < ActiveRecord::Migration[5.0]
   def change
     create_table :taggings do |t|
-      t.belongs_to :tag, foreign_key: true
-      t.belongs_to :posts, foreign_key: true
+      t.references :post, foreign_key: true
+      t.references :tag, foreign_key: true
 
       t.timestamps
     end
