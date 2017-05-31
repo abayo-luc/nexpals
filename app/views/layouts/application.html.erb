@@ -6,13 +6,14 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> 
-</head>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet"> 
+  </head>
 
 <body>
 
 
-  <% unless controller.controller_name == "home" && controller.controller_path=="home" %>
+  <% unless controller.controller_name == "pages" && controller.controller_path=="home" %>
 
 
   <!-- Nex Webstore -->
@@ -186,13 +187,13 @@
 <!-- navbar -->
 <ul class="nav navbar-nav navbar-right">
 
-  <li><a href="/" class="glyphicon glyphicon-home white" title="home"></a></li>
-  <li><a href="/updates" class="white" title="Updates">Updates</a></li>
-  <li><a href="/services" class="white" title="Services">Services</a></li>
-  <li><a href="/projects" class="white" title="Projects">Projects</a></li>
-  <li><a href="/team" class="white" title="Team">Team</a></li>
-  <li><a href="/contactus" class="white" title="Contact Us">Contact Us</a></li>
-  <li><a href="/aboutus" class="white" title="About Us">About Us </a></li>
+  <li><a href="/" class="glyphicon glyphicon-home" title="home" style="color: #8D8F91;"></a></li>
+  <li><a href="/posts"  title="Updates" style="color: #8D8F91;"><b>Blog</b></a></li>
+  <li><a href="/services"  title="Services" style="color: #8D8F91;"><b>Services</b></a></li>
+  <li><a href="/projects"  title="Projects" style="color: #8D8F91;"><b>Projects</b></a></li>
+  <li><a href="/team"  title="Team" style="color: #8D8F91;"><b>Team</b></a></li>
+  <li><a href="/contactus"  title="Contact Us" style="color: #8D8F91;"><b>Contact Us</b></a></li>
+  <li><a href="/aboutus"  title="About Us" style="color: #8D8F91;"><b>About Us</b></a></li>
 
 </ul>
 
@@ -213,12 +214,13 @@
        <% end %>
     </p>
 </div>
+<% end %>
 
     <%= yield %>
     <%= render "news_letters/form" %>
     <!-- footer -->
 
-<% unless controller.controller_name == "home" && controller.controller_path=="home" %>
+<% unless controller.controller_name == "pages" && controller.controller_path=="home" %>
 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <footer>
