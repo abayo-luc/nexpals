@@ -1,2 +1,0 @@
-class TestimoniesController < ApplicationController
-end

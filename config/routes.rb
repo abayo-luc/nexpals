@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
-  root 'pages#home'
-  get '/home' => "pages#home"
-  get '/aboutus' => "pages#aboutus"
-  get '/contactus' => "pages#contactus"
-  get '/faqs' => 'pages#faqs'
-  get '/testmonies' => 'pages#testmonies'
+  root 'posts#index'
   resources :posts
   get 'tags/:tag', to: 'posts#index', as: "tag"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
