@@ -1,0 +1,112 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1" id="logout">
+        <div class="page-header">
+            <h3 class="reviews">Leave your comment</h3>
+        </div>
+        <div class="comment-tabs">
+            <ul class="nav nav-tabs" role="tablist">
+            <% if @post.comments.any? %>
+                <li class="active"><a href="#comments-logout" role="tab" data-toggle="tab"><h4 class="reviews text-capitalize">Comments</h4></a></li>
+            <% end %>
+                <li><a href="#add-comment" role="tab" data-toggle="tab"><h4 class="reviews text-capitalize">Add comment</h4></a></li>
+            </ul>    
+            <div class="tab-content">
+            <% if @post.comments.any? %>
+                <div class="tab-pane active" id="comments-logout">                
+                    <ul class="media-list">
+                    <% @post.comments.each do |comment| %>
+                       <% unless comment.media %>
+                          <li class="media">
+                            <a class="pull-left" href="#">
+                              <img class="media-object img-circle" src="http://www.gurunanakschoolandcollege.com/images/profile.png" alt="profile">
+                            </a>
+                            <div class="media-body">
+                              <div class="well well-lg">
+                                  <h4 class="media-heading text-uppercase reviews"><%= comment.name %></h4>
+                                  <ul class="media-date text-uppercase reviews list-inline">
+                                    <li class="dd">22</li>
+                                    <li class="mm">09</li>
+                                    <li class="aaaa">2014</li>
+                                  </ul>
+                                  <p class="media-comment">
+                                    <%= comment.body %>
+                                  </p>
+                              </div>              
+                            </div>
+                          </li>          
+                        <% else %>
+                          <li class="media">
+                            <a class="pull-left" href="#">
+                              <img class="media-object img-circle" src="http://www.gurunanakschoolandcollege.com/images/profile.png" alt="profile">
+                            </a>
+                            <div class="media-body">
+                              <div class="well well-lg">
+                                  <h4 class="media-heading text-uppercase reviews"><%= comment.name %></h4>
+                                  <ul class="media-date text-uppercase reviews list-inline">
+                                    <li class="dd">22</li>
+                                    <li class="mm">09</li>
+                                    <li class="aaaa">2014</li>
+                                  </ul>
+                                  <p class="media-comment">
+                                    <%= comment.body %>
+                                  </p>
+                                  <div class="embed-responsive embed-responsive-16by9">
+                                      <iframe class="embed-responsive-item" src="<%= comment.media %>" allowfullscreen></iframe>
+                                  </div>
+                              </div>              
+                            </div>
+                          </li>
+                        <% end %>
+                      <% end %>
+                    </ul> 
+                </div>
+              <% end %>
+                <div class="tab-pane" id="add-comment">
+                    <div action="#" method="post" class="form-horizontal" id="commentForm" role="form"> 
+                    <%= form_for(@comment, url: comments_path) do |f| %>
+                    <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
+                              <%=  f.text_field :name, class: "form-control", id: "name" %>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                              <%=  f.text_field :email, class: "form-control", id: "email" %>
+                            </div>
+                        </div> 
+                        <div class="form-group">
+                            <label for="email" class="col-sm-2 control-label">Web</label>
+                            <div class="col-sm-10">
+                              <%=  f.text_field :web, class: "form-control", id: "email" %>
+                            </div>
+                        </div>             
+                        <div class="form-group">
+                            <label for="email" class="col-sm-2 control-label">Comment</label>
+                            <div class="col-sm-10">
+                              <%=  f.text_area :body, class: "form-control", id: "addComment", rows: "5"%><br>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="uploadMedia" class="col-sm-2 control-label">YouTube Media</label>
+                            <div class="col-sm-10">                    
+                                <div class="input-group">
+                                  <div class="input-group-addon">http://</div>
+                                  <%=  f.text_field :media, class: "form-control", id: "uploadMedia" %>
+                                </div>
+                            </div>
+                        </div>
+                        <%= f.hidden_field :post_id, value: @post.id  %> 
+                        <div class="form-group">
+                         <div class="col-lg-10 col-lg-offset-2">
+                           <div class="btn btn-primary" type="submit" id="submitComment"><span class="glyphicon glyphicon-send"></span></div><%= f.submit "Submit", class: "btn btn-success btn-circle text-uppercase" %>
+                         </div>
+                        </div>
+                      <% end %>           
+                    </div>  
+                </div>
+            </div>
+        </div>
+  </div>
