@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+   before_action :authenticate_admin, only:[:destroy]
   def new
     @comment = Comment.new
   end

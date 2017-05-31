@@ -1,3 +1,4 @@
+
 <!-- <span style="padding-left: 30px;"><%#= "#{@post.impressionist_count} views so far!" %></span> -->
       
 
@@ -8,6 +9,44 @@
     <img src="http://www.planwallpaper.com/static/images/1080p-HD-Wallpapers-9.jpg" style="height: 350px; overflow: hidden; width: 100%; opacity: 0.3">
 
     <div style="position: absolute; top: 100px; left: 0; width: 100%; ">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Newletter</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="title" style="font-family: cursive; font-size: 20px;">
+        <%= @post.title %>
+      </h3>
+      <p class="date">
+      <%= Time.at(@post.created_at).strftime("%B %e, %Y") %>
+      | <%= link_to 'Edit', edit_post_path(@post) %>
+      | <%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'} %>
+      |Tags: <%= raw tag_links(@post.all_tags) %>
+
+       <span class="glyphicon glyphicon-comment" aria-hidden="true" style="padding-left:30px; font-size:30px;" title="comment"><%= @post.comments.count %></span>
+
+        <!-- <span style="padding-left: 30px;"><%#= "#{@post.impressionist_count} views so far!" %></span> -->
+       
+      <div class="row"></div>
+        <div class="col-md-10">
+        <p style="font-family: cursive; font-style: italic; font-size: 12px;">
+          <%= @post.intro %>
+          
+        
+        </p>
+        <hr>
+          <p class="body">
+            <%= @post.body.html_safe %>
+          </p>
+          <hr>
+          <%= social_share_button_tag("#{@post.title}") %>
+          <hr>
+          <% @post.comments.each do |comment| %>
+            <h6 style="font-size: 20px; font-family: cursive; color: rgb(6, 34, 104)"><%= comment.name %></h6>
+            <p><%= comment.body %></p>
+          <% end %>
 
       <h1 class="text-center"><b><%= @post.title %></b></h1>
       <div class="col-md-3"></div>
