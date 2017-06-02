@@ -7,7 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">  
   </head>
 
 <body>
@@ -21,7 +21,7 @@
 
   <!-- Trigger the modal with a button -->
   <button  type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-left: 40px; margin-top: 5px; padding: 0px;  background-color:transparent; border-color: transparent; height: 30px;" title="Nex WebStore">
-    <div class="glyphicon glyphicon-th" style="color: #FFFFFF; font-size: 30px;"></div>
+    <div class="glyphicon glyphicon-th" style="color: #cdd2d5; font-size: 30px;"></div>
   </button>
 
 
@@ -188,13 +188,13 @@
 <!-- navbar -->
 <ul class="nav navbar-nav navbar-right">
 
-  <li><a href="/" class="glyphicon glyphicon-home" title="home" style="color: #8D8F91;"></a></li>
-  <li><a href="/posts"  title="Updates" style="color: #8D8F91;"><b>Blog</b></a></li>
-  <li><a href="/services"  title="Services" style="color: #8D8F91;"><b>Services</b></a></li>
-  <li><a href="/projects"  title="Projects" style="color: #8D8F91;"><b>Projects</b></a></li>
-  <li><a href="/team"  title="Team" style="color: #8D8F91;"><b>Team</b></a></li>
-  <li><a href="/contactus"  title="Contact Us" style="color: #8D8F91;"><b>Contact Us</b></a></li>
-  <li><a href="/aboutus"  title="About Us" style="color: #8D8F91;"><b>About Us</b></a></li>
+  <li><a href="/" class="glyphicon glyphicon-home" title="home" style="color: #cdd2d5;"></a></li>
+  <li><a href="/posts"  title="Updates" style="color: #cdd2d5;"><b>Blog</b></a></li>
+  <li><a href="/services"  title="Services" style="color: #cdd2d5;"><b>Services</b></a></li>
+  <li><a href="/projects"  title="Projects" style="color: #cdd2d5;"><b>Projects</b></a></li>
+  <li><a href="/members"  title="Team" style="color: #cdd2d5;"><b>Team</b></a></li>
+  <li><a href="/contactus"  title="Contact Us" style="color: #cdd2d5;"><b>Contact Us</b></a></li>
+  <li><a href="/aboutus"  title="About Us" style="color: #cdd2d5;"><b>About Us</b></a></li>
 
 </ul>
 </div>
@@ -216,28 +216,35 @@
        <% end %>
     </p>
 </div>
-
     <%= yield %>
-    <%= render "news_letters/form" %>
+
+
     <!-- footer -->
 
 <% unless controller.controller_name == "pages" && controller.controller_path=="home" %>
 
+
+
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <footer>
 
-  <div class="footer" style="background-color: #008080; padding-bottom: 0px;">
+  <div class="footer" style="background-color: #145776; padding-bottom: 0px;">
     <div class="container-fluid">
       <div class="row">
-
+       <div>
         <!-- <div class="footer-bottom"> -->
-        <div class="col-md-4 bottom-features">                  
-          <a href="/faq" class="black col-md-6" style="color: white;">FAQs</a>
-          <a href="/testimony" class="black col-md-6" style="color: white;">Reviews</a>
+        <div class="col-md-2 bottom-features">                  
+          <a href="/faqs" class="black col-md-6" style="color: white;">FAQs</a>
+          <a href="/testmonies" class="black col-md-6" style="color: white;">Reviews</a>
         </div> 
 
+        <div class="col-md-7 bottom-features">
+          <div class="col-md-12">
+          <%= render "news_letters/form" %>
+          </div>
+        </div>
 
-        <div class="col-md-4">
+        <div class="col-md-3">
 
             <ul class="social">
               <li> <a href="#"> <i class="fa fa-envelope-square fa-3x social">   </i> </a> </li>
@@ -246,13 +253,11 @@
               <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
               <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
             </ul>
+            <br> <br>
+           <p style="color: white;"> ©NexPals 2017. All right reserved</p>
 
         </div>
-
-        <div class="col-md-4 bottom-features">
-          <p style="color: white;"> ©NexPals 2017. All right reserved</p>
-        </div>
-
+      </div> 
       </div>
     </div>
   </div>
