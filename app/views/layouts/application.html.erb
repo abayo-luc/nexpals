@@ -232,15 +232,20 @@
   <div class="footer" style="background-color: #145776; padding-bottom: 0px;">
     <div class="container-fluid">
       <div class="row">
-
+       <div>
         <!-- <div class="footer-bottom"> -->
-        <div class="col-md-3 bottom-features">                  
+        <div class="col-md-2 bottom-features">                  
           <a href="/faqs" class="black col-md-6" style="color: white;">FAQs</a>
           <a href="/testmonies" class="black col-md-6" style="color: white;">Reviews</a>
         </div> 
 
+        <div class="col-md-7 bottom-features">
+          <div class="col-md-12">
+          <%= render "news_letters/form" %>
+          </div>
+        </div>
 
-        <div class="col-md-4">
+        <div class="col-md-3">
 
             <ul class="social">
               <li> <a href="#"> <i class="fa fa-envelope-square fa-3x social">   </i> </a> </li>
@@ -249,14 +254,11 @@
               <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
               <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
             </ul>
+            <br> <br>
+           <p style="color: white;"> ©NexPals 2017. All right reserved</p>
 
         </div>
-
-        <div class="col-md-4 bottom-features">
-          <p style="color: white;"> ©NexPals 2017. All right reserved</p>
-        </div>
-
-      <%= render "news_letters/form" %>
+      </div> 
       </div>
     </div>
   </div>
