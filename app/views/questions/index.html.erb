@@ -16,3 +16,146 @@
     <br>
   <% end %>
 </div>
+
+
+
+
+<div class="row">
+
+
+<div class="col-md-12 faq-background">
+ 
+ <h1 class="text-center" style="margin-top: 70px; margin-left: 500px; "><b>Do you still have a question?</b></h1>
+
+  <ul> 
+    <div class="btn-group">
+
+      <ul class="nav navbar-nav">
+
+        <%= form_tag "/#", class: "navbar-form", method: :post do %>
+
+          
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Type your question ..." name="#" style='width: 470px; margin-left: 55%; margin-top: 40px; height: 50px; border-radius: 10%;'>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="height: 50px; margin-top: 40px; border-radius: 50%; background-color: #008080"> Ask </button>
+       
+        <% end %>                      
+
+      </ul>
+    </div>
+  </ul>
+</div>
+
+
+
+<div class="col-md-9">
+<h1 class="text-center white"><b>FAQs</b></h1>
+<div class="col-md-12">
+
+
+<!-- question & answer-->
+<% @questions.each do |question| %>
+
+ <div class="col-md-4  thumbnail" style="
+     width: 28%;
+     box-shadow: 10px 10px 5px grey;
+     height: 300px;
+     margin: 20px;">
+   
+  <div class="thumbnail" style="
+      height: 50px;
+      width: 95%;
+      margin: 5px;
+      border-radius: 10%;
+      overflow: auto;
+      background-color: #008080;">
+
+    <h4 class="text-center" style="color: #FFFFFF;"><%= question.body.html_safe %></h4>
+
+  </div>
+  <div class="col-md-4 thumbnail" style="height: 220px; width: 95%; margin: 5px; border-radius: 10%; overflow:auto; background-color: #F0FFF0;">
+    <p class="text-center">Answers </p>
+ <br>
+    <p class="text-center">
+
+   But you can't do it in the way you may immediately think, because you cant animate or create a transition around the properties you'd otherwise rely on (e.g. display, or changing dimensions and setting to overflow:hidden) in order to correctly hide the element and prevent it from taking up visible space.
+
+Therefore, create an animation for the elements in question, and simply simply toggle visibility:hidden; after 5 seconds, whilst also setting height and width to zero to prevent the element from still occupying space in the DOM flow.
+
+    </p>
+  </div>
+ </div>
+
+<% end %>
+
+ 
+</div>
+
+
+</div>
+
+
+ <div class="col-md-2 thumbnail" 
+  style="
+  background-color: #B0C4DE;
+  box-shadow: 10px 10px 5px grey;
+  margin-top: 90px;
+  margin-left: 10px;
+  width: 300px;">
+
+
+  <div class="thumbnail" style="background-color: #a9cce3">
+    <div class="text-center">
+      <span class="name"><h3><b>Media Feeds</b></h3></span>
+
+    </div>
+  </div>
+
+  <div class="thumbnail" style="background-color: #a9cce3; height: 160px; overflow: auto;">
+    <a href="https://www.facebook.com/Plante.Josh"> <i class=" fa fa-facebook"> Facebook </i> </a>
+    <hr size="100">
+
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+
+  </div>
+  <div class="thumbnail" style="background-color: #a9cce3; height: 160px; overflow: auto;">
+    <a href="https://twitter.com/plantejosh1"> <i class="fa fa-twitter"> Twitter  </i> </a>
+    <hr>
+    
+     <a href="https://twitter.com/luc_wizz" class="twitter-follow-button" data-show-count="false">Follow @luc_wizz</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <a class="twitter-timeline"  data-height="500" data-link-color="#2B7BB9" href="https://twitter.com/luc_wizz">Tweets by luc_wizz</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  </div> 
+
+
+  <div class="thumbnail" style="background-color: #a9cce3; height: 160px; overflow: auto;">
+    <p> <b></b> Magazines </b></p> 
+    <hr>
+
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+    <p class="name" style="font-size: 10px">Notifications</p> 
+
+  </div>
+</div>
+
+
+</div>
