@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   get '/contactus' => "pages#contactus"
   get '/faqs' => 'pages#faqs'
   get '/testmonies' => 'pages#testmonies'
-  resources :posts
   get 'tags/:tag', to: 'posts#index', as: "tag"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
   resources :comments
+  resources :posts
 
   resources :replies
 
