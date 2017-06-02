@@ -14,8 +14,9 @@
 
 
   <% unless controller.controller_name == "pages" && controller.controller_path=="home" %>
-
-
+ 
+ <!-- entire navbar -->
+  <div style="background-color: #145776; height: 45px;">
   <!-- Nex Webstore -->
 
   <!-- Trigger the modal with a button -->
@@ -196,7 +197,8 @@
   <li><a href="/aboutus"  title="About Us" style="color: #8D8F91;"><b>About Us</b></a></li>
 
 </ul>
-
+</div>
+<% end %>
 
 <div class="container-fluid">
 
@@ -214,7 +216,6 @@
        <% end %>
     </p>
 </div>
-<% end %>
 
     <%= yield %>
     <%= render "news_letters/form" %>

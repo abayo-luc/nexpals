@@ -14,7 +14,8 @@ class PostsController < ApplicationController
     find_post
     @comment = Comment.new
     @reply = Reply.new
-
+    @posts = Post.all
+    @comments = @post.comments.paginate(:page => params[:page], :per_page => 6).order(created_at: "DESC")
     # impressionist(@post)
   end
 
