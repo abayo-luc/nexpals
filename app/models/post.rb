@@ -30,6 +30,5 @@ class Post < ApplicationRecord
 
   def tagged_with
     tags
-    
   end
 end

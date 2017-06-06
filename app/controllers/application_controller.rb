@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
     @current_admin ||= Admin.find_by(id: session[:admin_id]) if session[:admin_id]
   end
   helper_method :current_admin
+  
   def news_letter
     news_letter = NewsLetter.new
   end

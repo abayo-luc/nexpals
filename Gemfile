@@ -70,6 +70,11 @@ gem 'will_paginate-bootstrap'
 #social media share
 gem 'social-share-button'
 
+
 #image upload
 gem 'carrierwave'
 gem 'cloudinary'
+#admin dashboard
+gem 'rails_admin'
+gem 'devise'
+
