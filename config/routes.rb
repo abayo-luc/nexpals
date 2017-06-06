@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount Ckeditor::Engine => '/ckeditor'
+  
   root 'pages#home'
   get '/home' => "pages#home"
   get '/aboutus' => "pages#aboutus"
@@ -18,10 +21,10 @@ Rails.application.routes.draw do
 
   resources :replies
 
-  get "/admin", to: 'sessions#new'
-  post "/admin", to: 'sessions#create'
-  delete "/admin_out", to: 'sessions#destroy'
-  resources :admins, only: [:index, :show, :edit, :update]
+  # get "/in_admin", to: 'sessions#new'
+  # post "/in_admin", to: 'sessions#create'
+  # delete "/out_admin", to: 'sessions#destroy'
+  # resources :admins, only: [:index, :show, :edit, :update]
 
   resources :questions
   post "/question_reply", to: 'questions#reply'

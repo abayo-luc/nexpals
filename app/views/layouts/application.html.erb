@@ -216,6 +216,9 @@
        <% end %>
     </p>
 </div>
+<% if current_user && current_user.admin %>
+<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+<% end %>
     <%= yield %>
 
 
