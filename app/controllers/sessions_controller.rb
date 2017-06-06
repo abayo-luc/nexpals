@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if admin && admin.authenticate(params[:password]) && admin.identity == params[:identity]
       session[:admin_id] = admin.id
       flash[:success] = "logged in!"
-      redirect_to root_path
+      redirect_to main_app.root_path
     else 
       flash[:warning] = "You don't belong here!"
       render :new

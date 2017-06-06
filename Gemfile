@@ -69,3 +69,5 @@ gem 'will_paginate-bootstrap'
 
 #social media share
 gem 'social-share-button'
+gem 'rails_admin'
+gem 'devise'
