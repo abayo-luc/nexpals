@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>NextPals Posts</title>
-  <meta charset="utf-8">
-  <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
-</head>
-<body>
+
 <%= javascript_include_tag Ckeditor.cdn_url %>
   <%= form_for @post do |f| %>
   <% if @post.errors.any? %>
@@ -32,11 +25,10 @@
     </p>
     <p>
       <%= f.label :body %>
-      <%= f.cktext_area :body, :class => 'ckeditor' %>
+      <%= f.cktext_area :body, :class => 'ckeditor'%>
     </p>
       <p>
         <%= f.submit %>
       </p>
-      <% end %>
-</body>
-</html>
+  <% end %>
+

@@ -10,16 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170530233604) do
-=======
-
-ActiveRecord::Schema.define(version: 20170528220443) do
->>>>>>> e73dd5f27aa52b621e3937871a5573eb087d2938
-=======
-ActiveRecord::Schema.define(version: 20170528234228) do
->>>>>>> 625a282ef9061ef8956862eee007fc2482bf288c
+ActiveRecord::Schema.define(version: 20170603111519) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +46,13 @@ ActiveRecord::Schema.define(version: 20170528234228) do
     t.datetime "updated_at", null: false
     t.integer  "post_id"
     t.string   "media"
+  end
+
+  create_table "faqs", force: :cascade do |t|
+    t.string   "question"
+    t.string   "answer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -93,6 +91,18 @@ ActiveRecord::Schema.define(version: 20170528234228) do
     t.index ["impressionable_type", "impressionable_id", "session_hash"], name: "poly_session_index", using: :btree
     t.index ["impressionable_type", "message", "impressionable_id"], name: "impressionable_type_message_index", using: :btree
     t.index ["user_id"], name: "index_impressions_on_user_id", using: :btree
+  end
+
+  create_table "members", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "title"
+    t.string   "short_bio"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "news_letters", force: :cascade do |t|

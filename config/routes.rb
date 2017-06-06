@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get '/home' => "pages#home"
   get '/aboutus' => "pages#aboutus"
   get '/contactus' => "pages#contactus"
-  get '/faqs' => 'pages#faqs'
   get '/testmonies' => 'pages#testmonies'
   get '/members' => 'members#index'
   get '/projects' => "projects#index"
@@ -15,7 +14,6 @@ Rails.application.routes.draw do
   
   resources :comments
   resources :posts
-
   resources :replies
 
   get "/admin", to: 'sessions#new'
@@ -31,4 +29,6 @@ Rails.application.routes.draw do
       get :confirm_email
     end
   end
+  resources :faqs
+  resources :members
 end
