@@ -41,8 +41,12 @@
     
     <h1 class="text-center" style="color: white;"><b>Testimonies</b></h1>
     
-    <div class="col-md-12">
+    
 
+
+    <div class="col-md-12">
+    
+<!-- Active box -->
     <div class="col-md-5 thumbnail" style="margin: 20px; box-shadow: 10px 10px 5px grey;">
 
     <img src="http://img.timeinc.net/time/daily/2010/1011/poy_nomination_agassi.jpg" alt="logo" class="img-responsive " style="height: 100px; width: auto; border-radius: 20%; margin: 30px; box-shadow: 10px 10px 5px grey;" align="left" />
@@ -50,10 +54,35 @@
         <h4 class="name">Full Name</h4>
         <hr>
         <p>Short Bio</p>
-        <a href="" class="btn btn-default">Watch</a>
-        
+
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="w3-button w3-round-xlarge" data-toggle="modal" data-target="#Modal" style="border-radius: 10px; background-color: #008080; height: 40px; color: white;">Watch</button>
+
+        <!-- Modal -->
+        <div id="Modal" class="modal fade" role="dialog">
+          <div class="modal-dialog" style="width:470px; height:350px;">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                
+              </div>
+              <div class="modal-body">
+
+                <iframe style="width:420px; height:315px; padding: 0px;" src="https://www.youtube.com/embed/XGSy3_Czz8k">
+                </iframe>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
     </div>
 
+    <!-- inactive boxes -->
+
     <div class="col-md-5 thumbnail" style="margin: 20px; box-shadow: 10px 10px 5px grey;">
 
     <img src="http://img.timeinc.net/time/daily/2010/1011/poy_nomination_agassi.jpg" alt="logo" class="img-responsive " style="height: 100px; width: auto; border-radius: 20%; margin: 30px; box-shadow: 10px 10px 5px grey;" align="left" />
@@ -61,7 +90,10 @@
         <h4 class="name">Full Name</h4>
         <hr>
         <p>Short Bio</p>
-        <a href="" class="btn btn-default">Watch</a>
+        
+        <div class="text-center">
+          <button href="" class="w3-button w3-round-xlarge" style="border-radius: 10px; background-color: #008080; height: 40px; color: white;">Watch</button>         
+        </div>
         
     </div>
 
@@ -78,7 +110,10 @@
         <h4 class="name">Full Name</h4>
         <hr>
         <p>Short Bio</p>
-        <a href="" class="btn btn-default">Watch</a>
+        
+        <div class="text-center">
+          <button href="" class="w3-button w3-round-xlarge" style="border-radius: 10px; background-color: #008080; height: 40px; color: white;">Watch</button>         
+        </div>
         
     </div>
 
@@ -89,11 +124,12 @@
         <h4 class="name">Full Name</h4>
         <hr>
         <p>Short Bio</p>
-        <a href="" class="btn btn-default">Watch</a>
+        
+        <div class="text-center">
+          <button href="" class="w3-button w3-round-xlarge" style="border-radius: 10px; background-color: #008080; height: 40px; color: white;">Watch</button>         
+        </div>
         
     </div>
-
-    
 
     </div>
 
