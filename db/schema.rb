@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
+
 ActiveRecord::Schema.define(version: 20170603111519) do
-=======
+
 ActiveRecord::Schema.define(version: 20170530233604) do
->>>>>>> 0985fac4ab8724676ef5de2c531eb8e544a05fa3
+
+ActiveRecord::Schema.define(version: 20170606154600) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -107,6 +108,7 @@ ActiveRecord::Schema.define(version: 20170530233604) do
     t.string   "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "photo"
   end
 
   create_table "news_letters", force: :cascade do |t|
