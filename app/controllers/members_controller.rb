@@ -44,6 +44,6 @@ class MembersController < ApplicationController
       @member = Member.find_by(id: params[:id])
     end
     def member_params
-      params.require(:member).permit(:first_name, :last_name, :phone, :title, :email, :short_bio, :location)
+      params.require(:member).permit(:first_name, :last_name, :phone, :title, :email, :short_bio, :location, :photo)
     end
 end

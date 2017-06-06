@@ -54,10 +54,14 @@
       
         <div class="col-xs-12 col-sm-3">
 
+        <% unless member.photo_url.nil? %>
+          <%= image_tag member.photo_url(:display), class: "img-responsive img-circle"%><br />
+        <% else %>
           <img src="http://img.timeinc.net/time/daily/2010/1011/poy_nomination_agassi.jpg" alt="image" class="img-responsive img-circle"/>
+        <% end %>
 
           <div class="text-center">
-            <%= link_to "Edit", member_path(member), method: :patch %> |
+            <%= link_to "Edit", edit_member_path(member) %> |
             <%= link_to "Remove", member_path(member), method: :delete, data: {confirm: 'Are you sure?'}%>
           </div>
         </div>
