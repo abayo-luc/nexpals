@@ -57,7 +57,7 @@
           <img src="http://img.timeinc.net/time/daily/2010/1011/poy_nomination_agassi.jpg" alt="image" class="img-responsive img-circle"/>
 
           <div class="text-center">
-            <%= link_to "Edit", member_path(member), method: :patch %> |
+            <%= link_to "Edit", edit_member_path(member) %> |
             <%= link_to "Remove", member_path(member), method: :delete, data: {confirm: 'Are you sure?'}%>
           </div>
         </div>
@@ -84,10 +84,7 @@
      
       </div>
   <% end %>
-
-  
 </div>
-
 
 <!-- partners -->
 
@@ -140,14 +137,9 @@
    
     </div>
 
-    <hr>
-
-    
+    <hr>  
   
 </div>
-
-
-
 
 
   <!-- media feeds -->
@@ -163,5 +155,8 @@
       <a class="twitter-timeline"  data-height="500" data-link-color="#2B7BB9" href="https://twitter.com/luc_wizz">Tweets by luc_wizz</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
   </div> 
-
 </div>
+</div>
+
+
+
