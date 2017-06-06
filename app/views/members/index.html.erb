@@ -54,11 +54,7 @@
       
         <div class="col-xs-12 col-sm-3">
 
-        <% unless member.photo_url.nil? %>
-          <%= image_tag member.photo_url(:display), class: "img-responsive img-circle"%><br />
-        <% else %>
           <img src="http://img.timeinc.net/time/daily/2010/1011/poy_nomination_agassi.jpg" alt="image" class="img-responsive img-circle"/>
-        <% end %>
 
           <div class="text-center">
             <%= link_to "Edit", edit_member_path(member) %> |
@@ -88,10 +84,7 @@
      
       </div>
   <% end %>
-
-  
 </div>
-
 
 <!-- partners -->
 
@@ -144,14 +137,9 @@
    
     </div>
 
-    <hr>
-
-    
+    <hr>  
   
 </div>
-
-
-
 
 
   <!-- media feeds -->
@@ -167,5 +155,8 @@
       <a class="twitter-timeline"  data-height="500" data-link-color="#2B7BB9" href="https://twitter.com/luc_wizz">Tweets by luc_wizz</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
   </div> 
-
 </div>
+</div>
+
+
+
