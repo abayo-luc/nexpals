@@ -1,30 +1,22 @@
-CKEDITOR.editorConfig = function( config ) {
-  config.height = '600'
+# http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html#.toolbar_Full
+CKEDITOR.editorConfig = (config) ->
   config.language = 'en'
-  // Define changes to default configuration here.
-  // For complete reference see:
-  // http://docs.ckeditor.com/#!/api/CKEDITOR.config
-
-  // The toolbar groups arrangement, optimized for a single toolbar row.
-  config.toolbarGroups = [
-    { name: 'document',    groups: [ 'mode', 'document', 'doctools' ] },
-    { name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
-    { name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
-    { name: 'forms' },
-    { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-    { name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
-    { name: 'links' },
-    { name: 'insert' },
-    { name: 'styles' },
-    { name: 'colors' },
-    { name: 'tools' },
-    { name: 'others' },
-  ];
-
-  // The default plugins included in the basic setup define some buttons that
-  // are not needed in a basic editor. They are removed here.
-  config.removeButtons = 'Cut,Copy,Paste,Undo,Redo,Anchor,Underline,Strike,Subscript,Superscript';
-
-  // Dialog windows are also simplified.
-  config.removeDialogTabs = 'link:advanced';
-};
+  config.width = '725'
+  config.height = '600'
+  config.toolbar_Pure = [
+    { name: 'document',    items: [ 'Source'] },
+    { name: 'clipboard',   items: [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
+    { name: 'editing',     items: [ 'Scayt' ] },
+    { name: 'tools',       items: [ 'Maximize', 'ShowBlocks','-','About' ] }
+    '/',
+    { name: 'basicstyles', items: [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
+    { name: 'paragraph',   items: [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote'] },
+    { name: 'links',       items: [ 'Link','Unlink','Anchor' ] },
+    '/',
+    { name: 'styles',      items: [ 'Styles','Format','Font','FontSize' ] },
+    { name: 'colors',      items: [ 'TextColor','BGColor' ] },
+    { name: 'insert',      items: [ 'Image','Table','HorizontalRule', 'SpecialChar'] },
+    {name: 'about', itmes: ['About']}
+  ]
+  config.toolbar = 'Pure'
+  true

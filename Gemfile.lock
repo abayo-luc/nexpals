@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/galetahub/ckeditor.git
-  revision: 663289a9a032a98e455c0bb8089646657a7bbe4a
+  revision: 4e4472bbcb7629b632de0d2de80b623a7bf34a50
   specs:
     ckeditor (4.2.3)
       cocaine
