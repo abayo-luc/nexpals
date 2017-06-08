@@ -71,5 +71,5 @@ gem 'will_paginate-bootstrap'
 gem 'social-share-button'
 
 #image upload
-gem 'carrierwave'
-gem 'cloudinary'
+# gem 'carrierwave'
+# gem 'cloudinary'
