@@ -72,8 +72,9 @@ gem 'social-share-button'
 
 
 #image upload
-gem 'carrierwave'
-gem 'cloudinary'
+# gem 'carrierwave'
+# gem 'cloudinary'
+
 #admin dashboard
 gem 'rails_admin'
 gem 'devise'
