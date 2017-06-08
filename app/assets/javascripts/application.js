@@ -13,7 +13,7 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require ckeditor/init
 //= require turbolinks
 //= require social-share-button
 //= require_tree .
-//= require ckeditor/init

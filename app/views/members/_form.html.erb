@@ -1,4 +1,4 @@
-<%= form_for @member do |f| %>
+<%= form_for @member, :html => {:multipart => true} do |f| %>
   <%= f.label :first_name %>
   <%= f.text_field :first_name %>
   <br>
@@ -20,7 +20,8 @@
   <%= f.label :title %>
   <%= f.text_field :title %>
   <br>
-  <%= f.label :Image %>
-  <%= f.file_field :photo %>
+  <%= f.label :Photo%>
+  <%= file_field(:member, :photo, class: 'file_input') %>
+  <br>
   <%= f.submit %>
 <% end %>
