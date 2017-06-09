@@ -1,0 +1,18 @@
+
+ <div class="thumbnail">
+  <div class="col-xs-12 col-sm-3" >
+    <img src="http://img.timeinc.net/time/daily/2010/1011/poy_nomination_agassi.jpg" alt="first image" class="img-responsive" style="height: 100px; width: auto;" />
+  </div>
+  <div class="col-xs-12 col-sm-9 text-center">
+
+    <a href="/show" class="name" style="color: #008080;"> <b><%= link_to post.title, post%> </b></a>   
+    <hr>
+
+    <p> <%= truncate post.intro.html_safe, length: 350%> | <%= link_to 'Read More', post %></p>
+
+    <br>
+    <p style="text-align: right; font-size: 11px;"> <%= post.created_at.strftime("%B, %d, %Y") %></p>
+
+  </div>
+  <div class="clearfix"></div>
+</div>
