@@ -244,7 +244,7 @@ footer {
 
 
 .home-background {
-  background-image: url('home1.jpg');
+  background-image: url('homelighter.jpg');
   /*background-color: #203B52;*/
   height: 138%;
   width: 100%;
@@ -252,3 +252,15 @@ footer {
   filter: blur(4px);*/
   background-attachment: fixed;
 }
+
+
+@media (max-width: 767px) {
+      .myNavbar{
+        display: none;
+      }
+    }
+    @media (min-width: 767px) {
+      .myNavbar {
+        display: block;
+      }
+    }

@@ -57,7 +57,7 @@
 
 .corner-1 {
   transition: all 0.3s;
-  @include corners('scoop', 10, #145776);
+  @include corners('scoop', 10, #0b1e31);
   &:after {
     transition: all 0.3s;
     @include corners('scoop', 10, #330000);
@@ -70,7 +70,7 @@
 
 .corner-2 {
   transition: all 0.3s;
-  @include corners('bevel', 16, #145776);
+  @include corners('bevel', 16, #0b1e31);
   &:after {
     transition: all 0.3s;
     @include corners('bevel', 16, #003300);
@@ -83,7 +83,7 @@
 
 .corner-3 {
   transition: all 0.3s;
-  @include corners('notch', 5, #145776);
+  @include corners('notch', 5, #0b1e31);
   &:after {
     transition: all 0.3s;
     @include corners('notch', 5, #002266);
