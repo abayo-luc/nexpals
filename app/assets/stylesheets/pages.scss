@@ -60,11 +60,11 @@
   @include corners('scoop', 10, #0b1e31);
   &:after {
     transition: all 0.3s;
-    @include corners('scoop', 10, #330000);
+    @include corners('scoop', 10, #10253a);
   }
   &:hover {
-    @include corners('scoop', 27, #7F8891);
-    &:after { @include corners('scoop', 27, #330000); }
+    @include corners('scoop', 27, #9B8718);
+    &:after { @include corners('scoop', 27, #10253a); }
   }
 }
 
@@ -73,11 +73,11 @@
   @include corners('bevel', 16, #0b1e31);
   &:after {
     transition: all 0.3s;
-    @include corners('bevel', 16, #003300);
+    @include corners('bevel', 16, #10253a);
   }
   &:hover {
-    @include corners('bevel', 40, #7F8891);
-    &:after { @include corners('bevel', 40, #003300); }
+    @include corners('bevel', 40, #9B8718);
+    &:after { @include corners('bevel', 40, #10253a);}
   }
 }
 
@@ -86,11 +86,11 @@
   @include corners('notch', 5, #0b1e31);
   &:after {
     transition: all 0.3s;
-    @include corners('notch', 5, #002266);
+    @include corners('notch', 5, #10253a);
   }
   &:hover {
-    @include corners('notch', 15, #7F8891);
-    &:after { @include corners('notch', 15, #002266); }
+    @include corners('notch', 15, #9B8718);
+    &:after { @include corners('notch', 15, #10253a); }
   }
 }
 
