@@ -61,10 +61,11 @@
 
          <!-- first box -->
         <div id="my-posts">
-           <%= render @posts %>
-         </div>
-         
-          <%= will_paginate @posts %>
+           <%= render "post" %>
+        </div>
+        <%= will_paginate @posts %> 
+        <div class="loader"></div>  
+          
         
 
     </div>

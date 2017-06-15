@@ -7,6 +7,12 @@ class PostsController < ApplicationController
     else
       @posts = Post.paginate(:page => params[:page], :per_page => 2).order(created_at: "DESC")
     end
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @posts }
+      format.js
+     end
   end
 
   def show
