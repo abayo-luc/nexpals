@@ -54,7 +54,7 @@
       
         <div class="col-xs-12 col-sm-3">
         <% if member.photo %>
-          <%= image_tag member.photo_url, class: "img-responsive img-circle" %>
+          <%= image_tag member.photo_url(:display), class: "img-responsive img-circle" %>
         <% else %>
           <img src="http://img.timeinc.net/time/daily/2010/1011/poy_nomination_agassi.jpg" alt="image" class="img-responsive img-circle"/>
         <% end %>
