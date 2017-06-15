@@ -78,4 +78,3 @@ gem 'mini_magick', '~> 4.7'
 #admin dashboard
 gem 'rails_admin'
 gem 'devise'
-
