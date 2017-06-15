@@ -72,9 +72,9 @@ gem 'social-share-button'
 
 
 #image upload
-# gem 'carrierwave'
-# gem 'mini_magick', '~> 4.3'
-# gem 'cloudinary'
+gem 'carrierwave'
+gem 'mini_magick', '~> 4.3'
+gem 'cloudinary'
 
 #admin dashboard
 gem 'rails_admin'
