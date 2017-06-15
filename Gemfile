@@ -79,4 +79,3 @@ gem 'cloudinary'
 #admin dashboard
 gem 'rails_admin'
 gem 'devise'
-
