@@ -70,10 +70,10 @@ gem 'social-share-button'
 
 
 #image upload
-gem 'carrierwave', '~> 1.1'
-gem 'cloudinary' 
-gem 'ckeditor', '~> 4.2', '>= 4.2.3'
-gem 'mini_magick', '~> 4.7'
+# gem 'carrierwave', '~> 1.1'
+# gem 'cloudinary' 
+# gem 'ckeditor', '~> 4.2', '>= 4.2.3'
+# gem 'mini_magick', '~> 4.7'
 
 #admin dashboard
 gem 'rails_admin'
