@@ -1,4 +1,5 @@
 class MembersController < ApplicationController
+  wrap_parameters :member
   def index
     @members = Member.all
   end

@@ -1,4 +1,4 @@
 class Member < ApplicationRecord
-  attr_accessor :photo
-  mount_uploader :photo, AvatarUploader
+  mount_uploader :photo, PhotoUploader
+  validates :photo, presence: true
 end
