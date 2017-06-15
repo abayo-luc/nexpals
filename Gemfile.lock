@@ -59,6 +59,10 @@ GEM
       railties (>= 3.1)
     builder (3.2.3)
     byebug (9.0.6)
+    carrierwave (1.1.0)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     climate_control (0.2.0)
     cloudinary (1.8.1)
       aws_cf_signer
@@ -265,6 +269,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   bootswatch-rails
   byebug
+  carrierwave
   ckeditor!
   cloudinary
   coffee-rails (~> 4.2)
