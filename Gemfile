@@ -8,8 +8,6 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
-gem 'ckeditor', github: 'galetahub/ckeditor'
-gem 'paperclip', '~> 5.1'
 # gem 'impressionist', '~> 1.5', '>= 1.5.2'
 gem 'friendly_id', '~> 5.1.0'
 # Use postgresql as the database for Active Record
@@ -72,9 +70,10 @@ gem 'social-share-button'
 
 
 #image upload
-gem 'carrierwave'
-gem 'mini_magick', '~> 4.3'
-gem 'cloudinary'
+gem 'carrierwave', '~> 1.1'
+gem 'cloudinary' 
+gem 'ckeditor', '~> 4.2', '>= 4.2.3'
+gem 'mini_magick', '~> 4.7'
 
 #admin dashboard
 gem 'rails_admin'
