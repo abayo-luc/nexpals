@@ -265,6 +265,14 @@ footer {
   border-radius: 50%;
 }
 
+.media-feeds{
+  background-color:#0b1e31;
+  box-shadow: 10px 10px 5px grey;
+  margin-top: 90px;
+  margin-left: 15px;
+  width: 300px;
+}
+
 /*@media (max-width: 767px) {
       .myNavbar{
         display: none;

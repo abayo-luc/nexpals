@@ -130,3 +130,37 @@ nav {
 .slogan:hover{
   background-color: #008080;
 }
+
+
+.question-box {
+  width: 28%;
+  box-shadow: 10px 10px 5px grey;
+  height: 300px;
+  margin: 20px;
+}
+
+.question-title {
+  height: 50px;
+  width: 95%;
+  margin: 5px;
+  border-radius: 10%;
+  overflow: auto;
+  background-color: #0b1e31;
+  color: #FFFFFF;
+}
+
+.answer {
+  height: 220px;
+  width: 95%;
+  margin: 5px;
+  border-radius: 10%;
+  overflow:auto;
+  background-color: #F0FFF0;
+}
+
+.small-input {
+  width: 230px;
+  margin-left: 71.5%;
+  margin-top: 10px;
+  border-radius: 10%;
+}
