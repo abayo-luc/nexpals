@@ -20,7 +20,12 @@
   <%= f.label :title %>
   <%= f.text_field :title %>
   <br>
-  <%= f.label :Image %>
-  <%= f.file_field :photo %>
+  <label class="btn btn-primary">
+  <%= f.label :photo %>
+    <span style="display:none;">
+      <%= f.file_field :photo, required: true %>
+    </span>
+  </label>
+  <br>
   <%= f.submit %>
 <% end %>
