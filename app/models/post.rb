@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  
   validates :title, :body, presence: true
   # attr_accessor :body, :title, :intro, :tag_list
   has_many :taggings, dependent: :destroy

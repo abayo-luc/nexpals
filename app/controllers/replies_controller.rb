@@ -1,5 +1,4 @@
 class RepliesController < ApplicationController
-   before_action :authenticate_admin, only:[:destroy]
   def new
     @reply = Reply.new
   end

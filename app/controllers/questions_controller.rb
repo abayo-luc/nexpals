@@ -1,5 +1,4 @@
 class QuestionsController < ApplicationController
-  before_action :authenticate_admin, only:[:destroy, :index, :show, :destroy, :update, :edit]
   def index
     @questions = Question.all
   end
