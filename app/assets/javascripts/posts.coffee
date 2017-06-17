@@ -5,6 +5,8 @@ jQuery ->
   if $('.pagination').length 
     $(window).scroll ->
       url = $(".pagination .next_page").attr('href')
+      $('.loader').hide();
       if url && $(window).scrollTop() > $(document).height() - $(window).height() - 60
-        $('.pagination').text("Fectching more posts.....")
+        $('.loader').show();
+        $('.pagination').html('<img src="/assets/reload.gif" alt="Loading..." title="Loading..." style/>')
         $.getScript(url)
