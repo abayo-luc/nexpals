@@ -7,8 +7,8 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">  
-</head>
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Macondo+Swash+Caps" rel="stylesheet"> 
 
 <body>
 
@@ -16,13 +16,15 @@
   <% unless controller.controller_name == "pages" && controller.controller_path=="home" %>
   
   <!-- entire navbar -->
-  <div class="container-fluid myNavbar" style="background-color: #0b1e31;">
+  <div class="container-fluid myNavbar main-back-color">
+
    
+  <div class="nav navbar-nav navbar-left">
     <!-- Nex Webstore -->
 
     <!-- Trigger the modal with a button -->
-    <button  type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-left: 40px; margin-top: 5px; padding: 0px;  background-color:transparent; border-color: transparent; height: 30px;" title="Nex WebStore">
-      <div class="glyphicon glyphicon-th" style="color: #cdd2d5; font-size: 30px;"></div>
+    <button  type="button" class="btn btn-info btn-lg store" data-toggle="modal" data-target="#myModal" style="" title="Nex WebStore">
+      <div class="glyphicon glyphicon-th store-trigger-button"></div>
     </button>
 
 
@@ -33,17 +35,15 @@
       <div class="modal-dialog">
 
         <!-- Modal content-->
-        <div class="modal-content" style="background-color: #DCDCDC; height: 420px; margin-left: 20px;">
+        <div class="modal-content store-modal">
           
-          <div class="thumbnail" style="background-color: #0b1e31; margin: 20px;"> 
+          <div class="thumbnail main-back-color" style="margin: 20px;"> 
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h1 class="modal-title text-center white"><b>Nex WebStore</b></h1>
           </div>
 
           <div class="modal-body">
-            <div class="thumbnail" style="height: 300px; overflow: scroll; margin-top: -15px;">
-              
-
+            <div class="thumbnail" style="height: 300px; overflow: scroll; margin-top: -15px;">  
 
 
               <!-- first row -->
@@ -51,10 +51,8 @@
               <div class="col-md-4">
                 <div class="thumbnail app-box">
                   <br>
-
                   <div class="text-center glyphicon glyphicon-briefcase" style="font-size: 50px;color:#000080;">
                   </div>
-
                 </div>
                 <h4 class="text-center" style="color:#000080;">250Schools</h4>
               </div>
@@ -69,10 +67,10 @@
                 <h4 class="text-center" style="color: #228B22;">Ikigugu</h4>
               </div>
 
+
               <div class="col-md-4">
                 <div class="thumbnail app-box">
                   <br>
-
                   <div class="text-center glyphicon glyphicon-lamp" title="Developping & designing Static and Dynamic Websites" style="font-size: 50px; color:    #F4A460;"></div>
                 </div>
                 <h4 class="text-center" style="color:   #F4A460;">Ibyiwacu</h4>
@@ -125,6 +123,11 @@
       </div>
 
     </div>
+  </div>
+
+<!-- hire us button -->
+    <button href="" class="w3-button w3-round-xlarge hire-us-button">Hire Us</button>
+
   </div>
 
 

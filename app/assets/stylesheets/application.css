@@ -273,13 +273,54 @@ footer {
   width: 300px;
 }
 
-/*@media (max-width: 767px) {
-      .myNavbar{
-        display: none;
-      }
-    }
-    @media (min-width: 767px) {
-      .myNavbar {
-        display: block;
-      }
-    }*/
+.edit-button {
+  border-radius: 10px;
+  background-color: #008080;
+  height: 40px;
+  color: white;
+}
+
+.delete-button {
+  border-radius: 10px;
+  background-color: #7e1f25;
+  height: 40px;
+  color: white;
+}
+
+.main-color {
+  color: #0b1e31;
+}
+
+.main-back-color {
+  background-color: #0b1e31;
+}
+
+.hire-us-button {
+  margin-left: 200px;
+  margin-top: 5px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: transparent;
+  color: white;
+}
+
+.store {
+  margin-left: 40px;
+  margin-top: 3px;
+  padding: 0px;
+  background-color:transparent;
+  border-color: transparent;
+  height: 30px;
+}
+
+.store-trigger-button {
+  color: #cdd2d5;
+  font-size: 30px;
+  margin-top: -5px;
+}
+
+.store-modal {
+  background-color: #DCDCDC;
+  height: 420px;
+  margin-left: 20px;
+}

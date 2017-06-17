@@ -40,7 +40,7 @@
 <!-- Team NexPals -->
 <div class="col-md-5" style="margin: 20px;">
   
-  <h2 class="text-center" style="color: #008080;"><b>NexPals Team</b></h2>
+  <h2 class="text-center main-color"><b>NexPals Team</b></h2>
   <hr>
   
   <div class="text-center">
@@ -49,15 +49,15 @@
 
 
  <!-- first team member -->
- <div style="margin-top: 20px; box-shadow: 2px 2px 5px 2px grey; width: 97%;">
+ <div class="nexer">
     
       <div class="col-xs-12 col-sm-3">
 
         <img src="http://img.timeinc.net/time/daily/2010/1011/poy_nomination_agassi.jpg" alt="image" class="img-responsive img-circle" />
 
         <div class="text-center">
-          <button href="" class="w3-button w3-round-xlarge" style="border-radius: 10px; background-color: #008080; height: 40px; color: white;">Edit</button>
-          <button href="" class="w3-button w3-round-xlarge" style="border-radius: 10px; background-color: #7e1f25; height: 40px; color: white;">Fire</button>
+          <button href="" class="w3-button w3-round-xlarge edit-button">Edit</button>
+          <button href="" class="w3-button w3-round-xlarge delete-button">Fire</button>
         </div>
       </div>
 
@@ -81,16 +81,14 @@
       </div>
       <div class="clearfix"></div>
    
-    </div>
-
-  
+    </div>  
 </div>
 
 
 <!-- partners -->
 
 <div class="col-md-3" style="margin: 20px; margin-left: 30px;">
-  <h2 class="text-center" style="color: #008080;"><b>Partners</b></h2>
+  <h2 class="text-center main-color"><b>Partners</b></h2>
   <hr>
 
   <div class="text-center">
@@ -99,7 +97,7 @@
 
   <!-- first partner -->
     
-   <div style="margin-top: 20px; width: 97%;">
+   <div class="nex-partner-box">
     
       <div class="col-xs-12 col-sm-3" >
         <div style="width: 90px; height: auto;">
@@ -128,8 +126,8 @@
     
         
         <div class="text-center">
-          <button href="" class="w3-button w3-round-xlarge" style="border-radius: 10px; background-color: #008080; height: 40px; color: white;">Edit</button>
-          <button href="" class="w3-button w3-round-xlarge" style="border-radius: 10px; background-color: #7e1f25; height: 40px; color: white;">Remove</button>
+          <button href="" class="w3-button w3-round-xlarge edit-button">Edit</button>
+          <button href="" class="w3-button w3-round-xlarge delete-button">Remove</button>
         </div>
         
 
@@ -146,11 +144,6 @@
 
 
   <!-- media feeds -->
-  <div class="col-md-2 col-xs-12 thumbnail media-feeds">
-
-    <a href="https://twitter.com/luc_wizz" class="twitter-follow-button" data-show-count="false">Follow @luc_wizz</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-      <a class="twitter-timeline"  data-height="500" data-link-color="#2B7BB9" href="https://twitter.com/luc_wizz">Tweets by luc_wizz</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> 
-
-  </div> 
+  <%= render "pages/media" %>
 
 </div>
