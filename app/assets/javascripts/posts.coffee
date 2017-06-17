@@ -8,5 +8,5 @@ jQuery ->
       $('.loader').hide();
       if url && $(window).scrollTop() > $(document).height() - $(window).height() - 60
         $('.loader').show();
-        $('.pagination').html('.loader')
+        $('.pagination').html('<img src="/assets/reload.gif" alt="Loading..." title="Loading..." style/>')
         $.getScript(url)

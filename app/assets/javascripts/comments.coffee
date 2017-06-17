@@ -1,4 +1,3 @@
-jQuery ->
-  $(document).on "page:change", ->
-    $('#comments-link').click ->
-      alert "Okkkkk!"
+$(document).on "page:change", ->
+  $('#my_comments').click ->
+    alert "Okkkkk!"

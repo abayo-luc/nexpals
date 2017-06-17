@@ -4,15 +4,17 @@ class PostsController < ApplicationController
   def index
     if params[:tag]
       @posts = Post.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 2).order(created_at: "DESC")
+      respond_to do |format|
+        format.html
+        format.js
+      end
     else
       @posts = Post.paginate(:page => params[:page], :per_page => 2).order(created_at: "DESC")
+      respond_to do |format|
+        format.html
+        format.js
+      end
     end
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @posts }
-      format.js
-     end
   end
 
   def show
