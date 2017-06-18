@@ -65,36 +65,7 @@
         <div class="btn-group">
           <ul class="nav navbar-nav">
 
-            <%= form_tag "/#", class: "navbar-form", method: :post do %>
-
-            
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="name ..." name="#" style='width: 200px; margin-left: 5px; margin-top: 10px; border-radius: 10%;'>
-              </div>
-
-
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="email ..." name="#" style='width: 200px; margin-left: 5px; margin-top: 10px; border-radius: 10%;'>
-              </div>
-
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="phone ..." name="#" style='width: 200px; margin-left: 5px; margin-top: 10px; border-radius: 10%;'>
-              </div>
-
-
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="company website ..." name="#" style='width: 200px; margin-left: 5px; margin-top: 10px; border-radius: 10%;'>
-              </div>
-
-              <div class="form-group">
-                <textarea type="text" class="form-control" name="#" style='width: 410px; margin-left: 5px; margin-top: 10px; border-radius: 10%;' placeholder="type your message ..."></textarea>
-              </div>
-              
-              <div class="text-center">
-                <button type="submit" class="btn btn-primary" style="height: 50px; margin-top: 5px; border-radius: 50%; background-color: #008080; box-shadow: 5px 5px 2px grey;">Send</button>
-              </div>
-         
-            <% end %>                      
+           <%= render "questions/form" %>                     
 
           </ul>
         </div>

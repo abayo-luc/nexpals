@@ -10,10 +10,10 @@ class NewsLettersController < ApplicationController
     if @subscription.save
       NewsLetterMailer.email_confirmation(@subscription).deliver
       flash[:success] = "Please confirm your email address to continue"
-      redirect_to "/"
+      redirect_to :back
     else
       flash[:warnning] = "Ooooppss, something went wrong!"
-      redirect_to "/"
+      redirect_to :back
     end
     elsif @record && !@record.email_confirmed
       @subscription = @record
