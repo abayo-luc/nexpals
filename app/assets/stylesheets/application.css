@@ -198,13 +198,6 @@ footer {
   font-size: 1.5em; 
 }
 
-
-
-.post-title-font {
-  font-family: 'Josefin Slab', serif;
-  }
-
-
 /*navbar*/
 
 .navbar-xs {
@@ -221,4 +214,84 @@ footer {
   padding-top: 2px;
   padding-bottom: 2px;
   line-height: 16px
+}
+
+
+.post-title-font {
+  font-family: 'Josefin Slab', serif;
+  }
+
+
+/*WebStore*/
+.app-box {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color:   #E6E6FA;
+  margin: 20px;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.media-feeds{
+  background-color:#0b1e31;
+  box-shadow: 10px 10px 5px grey;
+  margin-top: 90px;
+  margin-left: 15px;
+  width: 300px;
+}
+
+.edit-button {
+  border-radius: 10px;
+  background-color: #008080;
+  height: 40px;
+  color: white;
+}
+
+.delete-button {
+  border-radius: 10px;
+  background-color: #7e1f25;
+  height: 40px;
+  color: white;
+}
+
+
+.store {
+  margin-left: 40px;
+  margin-top: 3px;
+  padding: 0px;
+  background-color:transparent;
+  border-color: transparent;
+  height: 30px;
+}
+
+.store-trigger-button {
+  color: #cdd2d5;
+  font-size: 30px;
+  margin-top: -5px;
+}
+
+.store-modal {
+  background-color: #DCDCDC;
+  height: 420px;
+  margin-left: 20px;
+}
+
+
+/*other navbar stuffs*/
+.main-color {
+  color: #0b1e31;
+}
+
+.main-back-color {
+  background-color: #0b1e31;
+}
+
+.hire-us-button {
+  margin-left: 200px;
+  margin-top: 5px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: transparent;
+  color: white;
 }
