@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  get '/posts_with_button', to: 'posts#index_with_button', as: 'posts_with_button'
   
   root 'pages#home'
   get '/home' => "pages#home"
@@ -18,6 +19,7 @@ Rails.application.routes.draw do
   resources :comments
   resources :posts
   resources :replies
+  resources :members
 
   # get "/in_admin", to: 'sessions#new'
   # post "/in_admin", to: 'sessions#create'

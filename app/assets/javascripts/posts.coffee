@@ -5,6 +5,7 @@ jQuery ->
   if $('.pagination').length 
     $(window).scroll ->
       url = $(".pagination .next_page").attr('href')
+      $('.loader').hide();
       if url && $(window).scrollTop() > $(document).height() - $(window).height() - 60
-        $('.pagination').text("Fectching more posts.....")
+        $('.pagination').text("Loading more data.....")
         $.getScript(url)

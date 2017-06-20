@@ -1,4 +1,5 @@
 
+ <% @posts.each do |post| %>
  <div class="thumbnail">
   <div class="col-xs-12 col-sm-3" >
     <img src="<%= post.url %>" alt="first image" class="img-responsive" style="height: 100px; width: auto;" />
@@ -16,3 +17,4 @@
   </div>
   <div class="clearfix"></div>
 </div>
+<% end %>
