@@ -1,7 +1,8 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12" style="position: relative;">
-     <img src="http://www.planwallpaper.com/static/images/1080p-HD-Wallpapers-9.jpg" style="height: 350px; overflow: hidden; width: 100%; opacity: 0.3">
+
+     <img src="<%= @post.url %>" style="height: 350px; overflow: hidden; width: 100%; opacity: 0.3">
   
       <div style="position: absolute; top: 100px; left: 0; width: 100%; ">
 
@@ -50,11 +51,10 @@
           <%= social_share_button_tag("#{@post.title}") %>
         </p>
         <hr>
-        <% if current_admin %>
+        <% if current_user && current_user.admin %>
           <%= link_to 'Edit', edit_post_path(@post) %>
           <%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'} %>
-        <% end %>
-
+          <% end %>
         <div class="post-comment">
           <div class="page-header">
               <%= link_to "View Comment", "#", id:"comments-link"%>

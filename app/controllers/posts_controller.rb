@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
    # impressionist actions: [:show], unique: [:session_hash]
    
   def index
@@ -60,7 +61,7 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :body, :intro, :all_tags)      
+      params.require(:post).permit(:title, :body, :intro, :all_tags, :url)      
     end 
      
     def check_for_cancel
