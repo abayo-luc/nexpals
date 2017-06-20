@@ -14,11 +14,11 @@
 
 <body>
 
-<div class="container" id="main">
+<div class="container-fluid" id="main">
   <% unless controller.controller_name == "pages" && controller.controller_path=="home" %>
  
  <!-- entire navbar -->
- <div class="myNavbar navbar-fixed-top" style="background-color: #0b1e31;">
+ <div class="myNavbar navbar" style="background-color: #0b1e31;">
  
   <!-- Nex Webstore -->
 
@@ -222,6 +222,7 @@
 </div>
     <%= yield %>
 </div>
+
 
 
     <!-- footer -->
