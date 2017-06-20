@@ -1,11 +1,20 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
    # impressionist actions: [:show], unique: [:session_hash]
    
   def index
     if params[:tag]
-      @posts = Post.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 2).order(created_at: "DESC")
+      @posts = Post.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 10).order(created_at: "DESC")
+      respond_to do |format|
+        format.html
+        format.js
+      end
     else
       @posts = Post.paginate(:page => params[:page], :per_page => 2).order(created_at: "DESC")
+      respond_to do |format|
+        format.html
+        format.js
+      end
     end
   end
 
@@ -14,7 +23,7 @@ class PostsController < ApplicationController
     @comment = Comment.new
     @reply = Reply.new
     @posts = Post.all
-    @comments = @post.comments.paginate(:page => params[:page], :per_page => 6).order(created_at: "DESC")
+    @comments = @post.comments.paginate(:page => params[:page], :per_page => 3).order(created_at: "DESC")
     # impressionist(@post)
   end
 
@@ -60,7 +69,7 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :body, :intro, :all_tags)      
+      params.require(:post).permit(:title, :body, :intro, :all_tags, :url)      
     end 
      
     def check_for_cancel

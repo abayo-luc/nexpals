@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+  before_action :authenticate_user!, except: [:new]
   def index
     @questions = Question.all
   end
@@ -9,10 +10,15 @@ class QuestionsController < ApplicationController
     @question = Question.new
   end
   def create
-    question = Question.new(question_params)
+    question = Question.new(
+      :name =>params[:name], 
+      :email=>params[:email],
+      :body=>params[:body], 
+      :phone=>params[:phone], 
+      :web=>params[:web])
     if question.save
       flash[:success] = "Question was successfully sent"
-      redirect_to "/"
+      redirect_to :back
     else
       render :new
     end
@@ -41,7 +47,7 @@ class QuestionsController < ApplicationController
     def find_question
       @question = Question.find_by(id: params[:id]) 
     end
-    def question_params
-      params.require(:question).permit(:name, :email, :body, :phone, :web, :subject, :reply)
-    end
+    # def question_params
+    #   params.require(:question).permit()
+    # end
 end
