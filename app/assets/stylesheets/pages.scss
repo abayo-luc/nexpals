@@ -5,6 +5,94 @@
 
 
 
+// Contact us page
+
+.contactus-background{
+  background-image: url('contactus.jpg');
+  height: 300px;
+  width: 100%;
+}
+
+.contacts-box {
+  margin: 20px; 
+  height: 300px;
+  width: 500px; 
+  background-color:#DCDCDC;
+  box-shadow: 10px 10px 20px 10px grey;
+  border-radius: 10px;
+}
+
+.contact-icon {
+  padding-left: 45%;
+  padding-right:45%;
+  padding-top: 30px;
+  font-size: 40px;
+  color:#0b1e31;
+  text-shadow: 4px 8px 4px #acafb1;
+}
+
+.contacts {
+  color: #AEAAA9;
+  text-shadow: 4px 8px 4px #E5E5E5;
+}
+
+.input-box {
+  width: 200px;
+  margin-top: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.contactus-textarea{
+  height: 100px;
+  margin-top: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.submit-button {
+  height: 50px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background-color: #0b1e31;
+  box-shadow: 5px 5px 2px grey;
+  position: relative;
+}
+
+
+// home page
+
+.home-background {
+  background-image: url('homelighter.jpg');
+  height: 130%;
+  width: 100%;
+  /*opacity: 0.7;
+  filter: blur(4px);*/
+  padding-top: 0px;
+}
+
+.home-button {
+  margin-bottom:15px;
+  width: 200px;
+  border-radius: 20%;
+}
+
+.hook1 {
+  color: #9B8718;
+  font-size: 100px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.hook2 {
+  color: #89B0C5;
+}
+
+.welcome-note {
+  color: white;
+  font-size: 25px;
+}
+
+
 @mixin corners($shape, $size, $color) {
  
   $n1: $size+px;
@@ -123,49 +211,6 @@ nav {
   text-align: center;
 }
 
-.welcome-note{
-  font-family: 'Marck Script', cursive;
-}
-
 .slogan:hover{
   background-color: #008080;
-}
-
-
-// Contact us page
-
-.contacts-box {
-  margin: 20px; 
-  height: 300px;
-  width: 500px; 
-  background-color:#DCDCDC;
-  box-shadow: 10px 10px 20px 10px grey;
-  border-radius: 10%;
-}
-
-.contact-icon {
-  padding-left: 45%;
-  padding-right:45%;
-  padding-top: 30px;
-  font-size: 40px;
-  color:#008080;
-  text-shadow: 4px 8px 4px #acafb1;
-}
-
-.contacts {
-  color:#666d71;
-  text-shadow: 4px 8px 4px #acafb1;
-}
-
-.input-box {
-  width: 200px;
-  margin-top: 10px;
-  border-radius: 10px;
-}
-
-.contactus-textarea{
-  width: 810px;
-  height: 250px;
-  margin-top: 10px;
-  border-radius: 10px;
 }

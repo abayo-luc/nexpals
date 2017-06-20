@@ -14,15 +14,7 @@
  *= require social-share-button
  *= require_self
  */
- .social-share-button-facebook {
-   display: inline-block;
-   width: 25px;
-   height: 25px;
-   background: url("/social/facebook.png") no-repeat;
- }
-
  
-
 
 
  html, body { 
@@ -39,6 +31,12 @@ img {
   width: 200px;
  }
 
+.social-share-button-facebook {
+   display: inline-block;
+   width: 25px;
+   height: 25px;
+   background: url("/social/facebook.png") no-repeat;
+ }
 
 .faq-background{
   background-image: url('ask.jpg');
@@ -239,30 +237,3 @@ footer {
 .navbar-xs { min-height:22px; border-radius:0} 
 .navbar-xs .navbar-brand{ padding: 2px 8px;font-size: 14px;line-height: 14px; } 
 .navbar-xs .navbar-nav > li > a { border-right:1px solid #ddd; padding-top: 2px; padding-bottom: 2px; line-height: 16px }
-
-
-
-
-.home-background {
-  background-image: url('homelighter.jpg');
-  /*background-color: #203B52;*/
-  height: 1380%;
-  width: 100%;
-  /*opacity: 0.7;
-  filter: blur(4px);*/
-  background-attachment: fixed;
-  padding-top: 0px;
-}
-
-/*
-@media (max-width: 767px) {
-      .myNavbar{
-        display: none;
-      }
-    }
-    @media (min-width: 767px) {
-      .myNavbar {
-        display: block;
-      }
-    }*/
-

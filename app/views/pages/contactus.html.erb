@@ -2,7 +2,7 @@
 
 
   <div class="col-md-12 contactus-background">
-    <h1 style="color:   #008080; font-size: 60px; margin-left: 250px;"><b>Contact Us</b></h1>
+    <h1 style="color:   #0b1e31; font-size: 60px; margin-left: 250px;"><b>Contact Us</b></h1>
   </div>
 
   <!-- Phone & email -->
@@ -22,15 +22,12 @@
 
   <div class="col-md-6 col-xs-12">
     <div class="thumbnail contacts-box">      
-      <h1 class="text-center" style="color:  #008080;"> <b>Leave a Message</b></h1>
+      <h1 class="text-center" style="color:  #0b1e31;"> <b>Leave a Message</b></h1>
 
-      <ul>
-        <div class="btn-group">
-          <ul class="nav navbar-nav">
-
+     
             <%= form_tag "/#", class: "navbar-form", method: :post do %>
 
-            <div class="col-md-5">
+            <div class="col-md-6">
               <div class="form-group">
                 <input type="text" class="form-control input-box" placeholder="name ...">
               </div>
@@ -40,30 +37,27 @@
               </div>
             </div>
             
-            <div class="col-md-5">
+            <div class="col-md-6">
               <div class="form-group">
                 <input type="text" class="form-control input-box" placeholder="phone ..." name="#">
               </div>
-
+             
               <div class="form-group">
                 <input type="text" class="form-control input-box" placeholder="company website ..." name="#">
               </div>
             </div>          
 
-            
-            <div class="form-group">
-              <textarea type="text" class="contactus-textarea" name="#" placeholder="type your message ..."></textarea>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn btn-primary" style="height: 50px; margin-top: 5px; border-radius: 50%; background-color: #008080; box-shadow: 5px 5px 2px grey;">Send</button>
+            <div class="col-xs-12">
+              <div class="form-group">
+                <textarea type="text" class="form-control contactus-textarea" name="#" placeholder="type your message ..." style="width: 445px;"></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary submit-button">Send</button>
+              </div>
             </div>
 
 
             <% end %>                      
-
-          </ul>
-        </div>
-      </ul>
 
     </div>
   </div>
