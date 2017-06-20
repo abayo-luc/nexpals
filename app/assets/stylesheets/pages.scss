@@ -130,3 +130,42 @@ nav {
 .slogan:hover{
   background-color: #008080;
 }
+
+
+// Contact us page
+
+.contacts-box {
+  margin: 20px; 
+  height: 300px;
+  width: 500px; 
+  background-color:#DCDCDC;
+  box-shadow: 10px 10px 20px 10px grey;
+  border-radius: 10%;
+}
+
+.contact-icon {
+  padding-left: 45%;
+  padding-right:45%;
+  padding-top: 30px;
+  font-size: 40px;
+  color:#008080;
+  text-shadow: 4px 8px 4px #acafb1;
+}
+
+.contacts {
+  color:#666d71;
+  text-shadow: 4px 8px 4px #acafb1;
+}
+
+.input-box {
+  width: 200px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.contactus-textarea{
+  width: 810px;
+  height: 250px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
