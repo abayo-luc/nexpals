@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  
+  validates :url, presence: true
   validates :title, :body, presence: true
   # attr_accessor :body, :title, :intro, :tag_list
   has_many :taggings, dependent: :destroy
@@ -32,4 +32,5 @@ class Post < ApplicationRecord
   def tagged_with
     tags
   end
+
 end
