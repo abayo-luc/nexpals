@@ -14,16 +14,9 @@
  *= require social-share-button
  *= require_self
  */
- .social-share-button-facebook {
-   display: inline-block;
-   width: 25px;
-   height: 25px;
-   background: url("/social/facebook.png") no-repeat;
- }
 
 
-
- html, body { 
+html, body { 
 background-color: #D8DDE1;
 padding-left: 1px;
 padding-right: 1px;
@@ -37,33 +30,6 @@ img {
   width: 200px;
  }
 
-
-.faq-background{
-  background-image: url('ask.jpg');
- /* background-repeat: no-repeat;*/
- height: 350px;
- width: 100%;
-}
-
-.aboutus-background{
-  background-image: url('aboutus.jpg');
- /* background-repeat: no-repeat;*/
- height: 350px;
- width: 100%;
-}
-
-.contactus-background{
-  background-image: url('contactus.jpg');
- /* background-repeat: no-repeat;*/
- height: 300px;
- width: 100%;
-}
-
-
-
-
-
-
 footer {
    /*position:fixed;*/
    left:0px;
@@ -71,6 +37,15 @@ footer {
    height:50px;
    width:100%;
 }
+
+
+.social-share-button-facebook {
+   display: inline-block;
+   width: 25px;
+   height: 25px;
+   background: url("/social/facebook.png") no-repeat;
+ }
+
 .bottom-features{
   padding-top: 30px;
   padding-bottom: 10px;
@@ -81,8 +56,6 @@ footer {
 .white, .white a {
   color: #fff;
 }
-
-
 
 .sessions_background{
   background-image: url('login.jpg');
@@ -234,33 +207,18 @@ footer {
 
 /*navbar*/
 
-.navbar-xs { min-height:22px; border-radius:0} 
-.navbar-xs .navbar-brand{ padding: 2px 8px;font-size: 14px;line-height: 14px; } 
-.navbar-xs .navbar-nav > li > a { border-right:1px solid #ddd; padding-top: 2px; padding-bottom: 2px; line-height: 16px }
-
-
-
-
-.home-background {
-  background-image: url('http://res.cloudinary.com/nexpals/image/upload/v1497535954/4936673-lighter-wallpapers_xslnxa.jpg');
-  /*background-color: #203B52;*/
-  height: 138%;
-  width: 100%;
-  /*opacity: 0.7;
-  filter: blur(4px);*/
-  background-attachment: fixed;
-}
-
-
-
-
-@media (max-width: 767px) {
-      .myNavbar{
-        display: none;
-      }
-    }
-    @media (min-width: 767px) {
-      .myNavbar {
-        display: block;
-      }
+.navbar-xs {
+  min-height:22px;
+  border-radius:0;
+} 
+.navbar-xs .navbar-brand {
+  padding: 2px 8px;
+  font-size: 14px;
+  line-height: 14px;
+} 
+.navbar-xs .navbar-nav > li > a {
+  border-right:1px solid #ddd;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  line-height: 16px
 }
