@@ -17,7 +17,7 @@
     </p>
     <p>
       <%= f.label :all_tags, "Tags (separated by commas)" %><br>
-      <%= f.text_field :all_tags%>
+      <%= f.text_field :all_tags, style:"width:100%; font-family:cursive;"%>
     </p>
     <p>
       <%= f.label :intro %><br>
@@ -26,6 +26,10 @@
     <p>
       <%= f.label :body %>
       <%= f.cktext_area :body, :class => 'ckeditor'%>
+    </p>
+    <p>
+      <%= f.label :Image_Url  %>
+      <%= f.text_field :url, style:"width:100%; font-family:cursive;", placeholder: "http://www.example.com/nexpals/image/sample.jpeg" %>
     </p>
       <p>
         <%= f.submit %>

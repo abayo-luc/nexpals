@@ -1,4 +1,5 @@
 class MembersController < ApplicationController
+    before_action :authenticate_user!, except: [:index]
   wrap_parameters :member
   def index
     @members = Member.all
