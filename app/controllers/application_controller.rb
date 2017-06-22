@@ -1,10 +1,12 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  # def current_admin
-  #   @current_admin ||= Admin.find_by(id: session[:admin_id]) if session[:admin_id]
-  # end
-  # helper_method :current_admin
+  def current_admin
+    if current_user && current_user.admin
+      current_admin = current_user
+    end
+  end
+  helper_method :current_admin
   
   def news_letter
     news_letter = NewsLetter.new
@@ -12,7 +14,7 @@ class ApplicationController < ActionController::Base
   helper_method :news_letter_new
 
   def authenticate_admin
-    unless current_admin 
+    unless current_user && current_user.admin 
       flash[:danger] = "Access Denied"
       redirect_to "/"
     end
