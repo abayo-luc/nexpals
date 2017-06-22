@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/home' => "pages#home"
   get '/aboutus' => "pages#aboutus"
   get '/contactus' => "pages#contactus"
-  get '/testmonies' => 'pages#testmonies'
+  get '/testmonies' => 'testimonies#index'
   get '/members' => 'members#index'
   get '/projects' => "projects#index"
   get '/services'  => 'services#index'
