@@ -21,6 +21,9 @@
      <a href="/services" class="btn corner-1 home-button">Services</a> <br>
      <a href="/aboutus" class="btn corner-2 home-button">About Us</a> <br>
      <a href="/contactus" class="btn corner-3 home-button">Contact Us</a> <br>
+     <% if current_user %>
+      <%= link_to "Sign Out", "/users/sign_out", method: "delete", class:"btn corner-3 home-button" %>
+     <% end %>
     </ul>
    </nav>
  </div>
