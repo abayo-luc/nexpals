@@ -33,8 +33,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    p@post.assign_attributes(user_id: current_user.id)
     if @post.save
-      @post.user_id = current_user.id
       
       flash[:success] = "Posted Created"
       redirect_to @post
