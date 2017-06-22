@@ -1,7 +1,7 @@
 <div class="row">
 
 
-<!-- Carousel -->
+  <!-- Carousel -->
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -37,44 +37,46 @@
   </div>
 
 
-  <h1 class="text-center" style="color: white;"><b>Projects</b></h1>
+  <h1 class="text-center page-title"><b>Our Work</b></h1>
 
-  <div class="col-md-3 text-center thumbnail" style="margin-top: 50px; background-color: #E6E6FA; box-shadow: 10px 10px 5px grey;">
-    <h1><b>For Customers</b></h1>
-    <hr>
-    <div class="thumbnail">      
-      <img src="http://img.timeinc.net/time/daily/2010/1011/poy_nomination_agassi.jpg" style="float: left; height: 100px; width: auto;">
-      <h3>Customer Name</h3>
+  <div class="col-md-9">
+    <div class="col-md-12 text-center">
+      <h2><b>Customers</b></h2>
+      <% 4.times do || %>
+      <div class="col-xs-12 col-md-5 thumbnail work-app-box">
+        <div class="col-md-4 col-xs-5">
+          <img src="https://pbs.twimg.com/profile_images/806314739630424064/R_Ju2ljg.jpg" alt="app/customer logo" class="app-image">
+          <h4><b>Customer name</b></h4>
+        </div>
+        <div class="caption col-md-8 col-xs-7 app-description">
+          <p>Description Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+        </div>
+        <button href="" class="w3-button w3-round-xlarge edit-button">Browse</button>
+      </div>
+      <%end%>
+    </div>
+
+
+    <div class="col-md-12 text-center">
+      <h2><b>NexPals</b></h2>
       <hr>
-      <p>Short description of the app</p>
+      <% 4.times do || %>
+      <div class="col-xs-12 col-md-5 thumbnail work-app-box">
+        <div class="col-md-4 col-xs-5">
+          <img src="https://image.freepik.com/free-vector/abstract-and-colorful-logo_23-2147504722.jpg" alt="app logo" class="app-image">
+          <h4><b>App Name</b></h4>
+        </div>
+        <div class="caption col-md-8 col-xs-7 app-description">
+          <p>Description Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+        </div>
+        <button href="" class="w3-button w3-round-xlarge edit-button">Browse</button>        
+      </div>
+      <%end%>
+
     </div>
   </div>
-
-  <div class="col-md-5 text-center thumbnail" style="margin: 20px; margin-top: 50px; background-color: #E6E6FA; box-shadow: 10px 10px 5px grey;">
-    <h1><b>For NexPals</b></h1>
-    <hr>
-    <div class="thumbnail">      
-      <img src="http://img.timeinc.net/time/daily/2010/1011/poy_nomination_agassi.jpg" style="float: left;height: 150px; width: auto;">
-      <h3>Project Name</h3>
-      <hr>
-      <p>Short description of the app</p>
-    </div>
-  </div>
-
 
 
   <!-- media feeds -->
-  <div class="col-md-2 thumbnail" 
-  style="
-  background-color: #B0C4DE;
-  box-shadow: 10px 10px 5px grey;
-  margin-top: 50px;
-  margin-left: 10px;
-  width: 300px;">
-
-    <a href="https://twitter.com/luc_wizz" class="twitter-follow-button" data-show-count="false">Follow @luc_wizz</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-      <a class="twitter-timeline"  data-height="500" data-link-color="#2B7BB9" href="https://twitter.com/luc_wizz">Tweets by luc_wizz</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> 
-
-  </div> 
-
+  <%= render "pages/media" %>
 </div>

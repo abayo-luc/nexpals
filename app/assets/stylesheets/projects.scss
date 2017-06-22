@@ -1,3 +1,21 @@
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.app-image {
+  width: 100%;
+  height: auto;
+}
+
+.work-app-box {
+  margin: 20px;
+  height: 250px;
+  border-color: transparent;
+  box-shadow: 2px 4px 2px #AEB9B9;
+}
+
+.app-description {
+  height: 200px;
+  overflow: auto;
+}
