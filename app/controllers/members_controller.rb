@@ -1,6 +1,7 @@
 class MembersController < ApplicationController
-    before_action :authenticate_admin, except: [:index]
-    wrap_parameters :member
+  before_action :authenticate_admin, except: [:index]
+   wrap_parameters :member
+
   def index
     @members = Member.all
   end
