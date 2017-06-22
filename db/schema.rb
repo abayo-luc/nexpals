@@ -10,25 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170620111113) do
+ActiveRecord::Schema.define(version: 20170622101328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "admins", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password_digest"
-    t.string   "identity"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
     t.string   "data_content_type"
     t.integer  "data_file_size"
-    t.string   "data_fingerprint"
     t.string   "type",              limit: 30
     t.integer  "width"
     t.integer  "height"
@@ -109,6 +99,7 @@ ActiveRecord::Schema.define(version: 20170620111113) do
     t.datetime "updated_at", null: false
     t.string   "slug"
     t.string   "url"
+    t.integer  "user_id"
     t.index ["slug"], name: "index_posts_on_slug", using: :btree
   end
 
