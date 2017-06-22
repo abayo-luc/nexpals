@@ -12,6 +12,13 @@ class ApplicationController < ActionController::Base
     news_letter = NewsLetter.new
   end
   helper_method :news_letter_new
+  def authenticate_user
+    unless current_user
+      flash[:danger]= "access Denied"
+      redirect_to "/"
+    end
+    
+  end
 
   def authenticate_admin
     unless current_user && current_user.admin 
