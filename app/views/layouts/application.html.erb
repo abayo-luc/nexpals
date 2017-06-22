@@ -1,237 +1,175 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Nexpals</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Nexpals</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'jquery', 'applicatioin' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'jquery', 'applicatioin' %>
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  </head>
-
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Macondo+Swash+Caps" rel="stylesheet"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
 
-<div class="container-fluid" id="main">
-  <% unless controller.controller_name == "pages" && controller.controller_path=="home" %>
- 
- <!-- entire navbar -->
- <div class="myNavbar navbar" style="background-color: #0b1e31;">
- 
-  <!-- Nex Webstore -->
 
-  <!-- Trigger the modal with a button -->
-  <button  type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-left: 40px; margin-top: 5px; padding: 0px;  background-color:transparent; border-color: transparent; height: 30px;" title="Nex WebStore">
-    <div class="glyphicon glyphicon-th" style="color: #cdd2d5; font-size: 30px;"></div>
-  </button>
+  
+  <!-- entire navbar -->
+  <div class="container-fluid myNavbar main-back-color" id="main">   
+  <div class="nav navbar-nav navbar-left">
+    <!-- Nex Webstore -->
 
-
-  <!-- Modal -->
+    <!-- Trigger the modal with a button -->
+    <button  type="button" class="btn btn-info btn-lg store" data-toggle="modal" data-target="#myModal" style="" title="Nex WebStore">
+      <div class="glyphicon glyphicon-th store-trigger-button"></div>
+    </button>
 
 
-  <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+    <!-- Modal -->
 
-      <!-- Modal content-->
-      <div class="modal-content" style="background-color: #DCDCDC; height: 420px; margin-left: 20px;">
-      
-        <div class="thumbnail" style="background-color: #0b1e31; margin: 20px;"> 
+
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content store-modal">
+          
+          <div class="thumbnail main-back-color" style="margin: 20px;"> 
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h1 class="modal-title text-center white"><b>Nex WebStore</b></h1>
-        </div>
+          </div>
 
-        <div class="modal-body">
-        <div class="thumbnail" style="height: 300px; overflow: scroll; margin-top: -15px;">
-          
-
+          <div class="modal-body">
+            <div class="thumbnail" style="height: 300px; overflow: scroll; margin-top: -15px;">  
 
 
-          <!-- first row -->
-          <div class="col-md-12">
+              <!-- first row -->
+              
+              <div class="col-md-4">
+                <div class="thumbnail app-box">
+                  <br>
+                  <div class="text-center glyphicon glyphicon-briefcase" style="font-size: 50px;color:#000080;">
+                  </div>
+                </div>
+                <h4 class="text-center" style="color:#000080;">250Schools</h4>
+              </div>
+
+
+              <div class="col-md-4">
+                <div class="thumbnail app-box">
+                  <br>
+
+                  <div class="text-center glyphicon glyphicon-education" title="Education Services" style="font-size: 50px; color: #228B22;"></div>
+                </div>
+                <h4 class="text-center" style="color: #228B22;">Ikigugu</h4>
+              </div>
+
+
+              <div class="col-md-4">
+                <div class="thumbnail app-box">
+                  <br>
+                  <div class="text-center glyphicon glyphicon-lamp" title="Developping & designing Static and Dynamic Websites" style="font-size: 50px; color:    #F4A460;"></div>
+                </div>
+                <h4 class="text-center" style="color:   #F4A460;">Ibyiwacu</h4>
+
+              </div>
+
+
+              <!-- second row -->
+              <div class="col-md-4">
+
+                <div class="thumbnail app-box">
+                  <br>
+
+                  <div class="text-center glyphicon glyphicon-briefcase"
+                  style="font-size: 50px;color:#000080;">
+                </div>
+
+              </div>
+              <h4 class="text-center" style="color:#000080;">250Schools</h4>
+            </div>
+
 
             <div class="col-md-4">
 
-              <div class="thumbnail" style="
-              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-              background-color:   #E6E6FA;
-              margin: 20px;
-              height: 100px;
-              width: 100px;
-              text-align: center;
-              border-radius: 50%;">
+              <div class="thumbnail app-box">
+                <br>
 
-              <br>
 
-              <div class="text-center glyphicon glyphicon-briefcase" style="font-size: 50px;color:#000080;">
+                <div class="text-center glyphicon glyphicon-education" title="Education Services" style="font-size: 50px; color: #228B22;"></div>
               </div>
+              <h4 class="text-center" style="color: #228B22;">Ikigugu</h4>
+            </div>
+
+            <div class="col-md-4">
+
+              <div class="thumbnail app-box">
+
+                <br>
+
+
+                <div class="text-center glyphicon glyphicon-lamp" title="Developping & designing Static and Dynamic Websites" style="font-size: 50px; color:    #F4A460;"></div>
+              </div>
+              <h4 class="text-center" style="color:   #F4A460;">Ibyiwacu</h4>
 
             </div>
-            <h4 class="text-center" style="color:#000080;">250Schools</h4>
           </div>
 
-
-          <div class="col-md-4">
-
-            <div class="thumbnail" style="
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            background-color:   #E6E6FA;
-            margin: 20px;
-            height: 100px;
-            width: 100px;
-            text-align: center;
-            border-radius: 50%;">
-
-            <br>
-
-
-            <div class="text-center glyphicon glyphicon-education" title="Education Services" style="font-size: 50px; color: #228B22;"></div>
-          </div>
-          <h4 class="text-center" style="color: #228B22;">Ikigugu</h4>
         </div>
 
-        <div class="col-md-4">
-
-          <div class="thumbnail" style="
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          background-color:   #E6E6FA;
-          margin: 20px;
-          height: 100px;
-          width: 100px;
-          text-align: center;
-          border-radius: 50%;">
-
-          <br>
-
-
-          <div class="text-center glyphicon glyphicon-lamp" title="Developping & designing Static and Dynamic Websites" style="font-size: 50px; color:    #F4A460;"></div>
-        </div>
-        <h4 class="text-center" style="color:   #F4A460;">Ibyiwacu</h4>
-
-      </div>
-    </div>
-
-    <!-- second row -->
-
-    <div class="col-md-12">
-
-      <div class="col-md-4">
-
-        <div class="thumbnail" style="
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        background-color:   #E6E6FA;
-        margin: 20px;
-        height: 100px;
-        width: 100px;
-        text-align: center;
-        border-radius: 50%;">
-
-        <br>
-
-        <div class="text-center glyphicon glyphicon-briefcase"
-        style="font-size: 50px;color:#000080;">
       </div>
 
     </div>
-    <h4 class="text-center" style="color:#000080;">250Schools</h4>
+  </div>
+
+<!-- hire us button -->
+    <button href="/contactus" class="w3-button w3-round-xlarge hire-us-button">Hire Us</button>
+    
+
   </div>
 
 
-  <div class="col-md-4">
+  <!-- navbar -->
+  <ul class="nav navbar-nav navbar-right" style="padding-left: -30px;">
 
-    <div class="thumbnail" style="
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color:   #E6E6FA;
-    margin: 20px;
-    height: 100px;
-    width: 100px;
-    text-align: center;
-    border-radius: 50%;">
+    <li><a href="/" class="glyphicon glyphicon-home" title="home" style="color: #cdd2d5;"></a></li>
+    <li><a href="/posts"  title="Updates" style="color: #cdd2d5;"><b>Blog</b></a></li>
+    <li><a href="/services"  title="Services" style="color: #cdd2d5;"><b>Services</b></a></li>
+    <li><a href="/projects"  title="Projects" style="color: #cdd2d5;"><b>Projects</b></a></li>
+    <li><a href="/members"  title="Team" style="color: #cdd2d5;"><b>Team</b></a></li>
+    <li><a href="/contactus"  title="Contact Us" style="color: #cdd2d5;"><b>Contact Us</b></a></li>
+    <li><a href="/aboutus"  title="About Us" style="color: #cdd2d5;"><b>About Us</b></a></li>
 
-    <br>
+  </ul>
 
-
-    <div class="text-center glyphicon glyphicon-education" title="Education Services" style="font-size: 50px; color: #228B22;"></div>
-  </div>
-  <h4 class="text-center" style="color: #228B22;">Ikigugu</h4>
-</div>
-
-<div class="col-md-4">
-
-  <div class="thumbnail" style="
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color:   #E6E6FA;
-  margin: 20px;
-  height: 100px;
-  width: 100px;
-  text-align: center;
-  border-radius: 50%;">
-
-  <br>
-
-
-  <div class="text-center glyphicon glyphicon-lamp" title="Developping & designing Static and Dynamic Websites" style="font-size: 50px; color:    #F4A460;"></div>
-</div>
-<h4 class="text-center" style="color:   #F4A460;">Ibyiwacu</h4>
-
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-
-<!-- navbar -->
-<ul class="nav navbar-nav navbar-right" style="padding-left: -30px;">
-
-  <li><a href="/" class="glyphicon glyphicon-home" title="home" style="color: #cdd2d5;"></a></li>
-  <li><a href="/posts"  title="Updates" style="color: #cdd2d5;"><b>Blog</b></a></li>
-  <li><a href="/services"  title="Services" style="color: #cdd2d5;"><b>Services</b></a></li>
-  <li><a href="/projects"  title="Projects" style="color: #cdd2d5;"><b>Projects</b></a></li>
-  <li><a href="/members"  title="Team" style="color: #cdd2d5;"><b>Team</b></a></li>
-  <li><a href="/contactus"  title="Contact Us" style="color: #cdd2d5;"><b>Contact Us</b></a></li>
-  <li><a href="/aboutus"  title="About Us" style="color: #cdd2d5;"><b>About Us</b></a></li>
-
-</ul>
-<% end %>
 </div>
 
 
 <div class="container-fluid" >
 
-    <p>
-      <% flash.each do |key, value| %>
-      <% alert_class = case key
-      when :notice then "success"
-      when :alert then "danger"
-      else key
-       end %>
-       <%= content_tag :div, class: "alert alert-#{alert_class}" do %>
-       <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-       <%= value %>
-       <% end %>
-       <% end %>
-    </p>
-</div>
-    <%= yield %>
-</div>
+  <p>
+    <% flash.each do |key, value| %>
+    <% alert_class = case key
+    when :notice then "success"
+    when :alert then "danger"
+    else key
+     end %>
+     <%= content_tag :div, class: "alert alert-#{alert_class}" do %>
+     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+     <%= value %>
+     <% end %>
+     <% end %>
+   </p>
+ </div>
+ <%= yield %>
 
 
+ <!-- footer -->
 
-    <!-- footer -->
-
-<% unless controller.controller_name == "pages" && controller.controller_path=="home" %>
-
-
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<footer>
+ 
+ <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+ <footer>
 
   <div class="footer" style="background-color: #0b1e31; padding-bottom: 0px;">
     <div class="container-fluid myFooter">
@@ -244,30 +182,29 @@
         </div> 
 
         <div class=" col-xs-12 col-md-7 bottom-features">
-          <div class="col-xs-12 col-md-12">
-          <%= render "news_letters/form" %>
+          <div class="col-md-12">
+            <%= render "news_letters/form" %>
           </div>
         </div>
 
-        <div class="col-xs-16 col-md-3">
+        <div class="col-xs-12 col-md-3">
 
-            <ul class="social">
-              <li> <a href="#"> <i class="fa fa-envelope-square fa-3x social">   </i> </a> </li>
-              <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
-              <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
-              <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
-              <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
-            </ul>
-            <br> <br>
-           <p style="color: white;"> ©NexPals 2017. All right reserved</p>
+          <ul class="social">
+            <li> <a href="#"> <i class="fa fa-envelope-square fa-3x social"></i></a></li>
+            <li> <a href="#"> <i class=" fa fa-facebook"></i></a> </li>
+            <li> <a href="#"> <i class="fa fa-twitter"></i></a></li>
+            <li> <a href="#"> <i class="fa fa-google-plus"></i></a></li>
+            <li> <a href="#"> <i class="fa fa-youtube"></i></a></li>
+          </ul>
+          <br> <br>
+          <p style="color: white;"> ©NexPals 2017. All right reserved</p>
 
         </div>
       </div> 
-      </div>
     </div>
   </div>
+</div>
 </footer>
 
-<% end %>
-  </body>
+</body>
 </html>
