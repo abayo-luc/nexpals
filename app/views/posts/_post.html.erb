@@ -6,7 +6,7 @@
   </div>
   <div class="col-xs-12 col-sm-9 text-center">
 
-    <a href="/show" class="name" style="color: #008080;"> <b><%= link_to post.title, post%> </b></a>   
+    <a href="/posts/<%= post.slug %>" class="name" style="color: #008080;"> <b><%= post.title%> </b></a>   
     <hr>
 
     <p> <%= truncate post.intro.html_safe, length: 350%> | <%= link_to 'Read More', post %></p>
