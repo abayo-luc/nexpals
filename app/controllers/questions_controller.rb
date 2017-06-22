@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :authenticate_user!, except: [:new]
+  before_action :authenticate_user!, except: [:new, :create]
   def index
     @questions = Question.all
   end

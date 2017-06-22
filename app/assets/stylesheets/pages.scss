@@ -5,6 +5,92 @@
 
 
 
+// Contact us page
+
+.contactus-background{
+  background-image: url('contactus.jpg');
+  height: 300px;
+  width: 100%;
+}
+
+.contacts-box {
+  margin: 20px; 
+  height: 300px;
+  width: 500px; 
+  background-color:#DCDCDC;
+  box-shadow: 10px 10px 20px 10px grey;
+  border-radius: 10px;
+}
+
+.contact-icon {
+  padding-left: 45%;
+  padding-right:45%;
+  padding-top: 30px;
+  font-size: 40px;
+  color:#0b1e31;
+  text-shadow: 4px 8px 4px #acafb1;
+}
+
+.contacts {
+  color: #AEAAA9;
+  text-shadow: 4px 8px 4px #E5E5E5;
+}
+
+.input-box {
+  width: 200px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.contactus-textarea{
+  height: 100px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.submit-button {
+  height: 50px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background-color: #0b1e31;
+  color: white;
+  box-shadow: 5px 5px 2px grey;
+}
+
+
+// home page
+
+.home-background {
+  background-image: url('homelighter.jpg');
+  height: 130%;
+  width: 100%;
+  /*opacity: 0.7;
+  filter: blur(4px);*/
+  padding-top: 0px;
+}
+
+.home-button {
+  margin-bottom:15px;
+  width: 200px;
+  border-radius: 20%;
+}
+
+.hook1 {
+  color: #9B8718;
+  font-size: 100px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.hook2 {
+  color: #89B0C5;
+}
+
+.welcome-note {
+  color: white;
+  font-size: 25px;
+}
+
+
 @mixin corners($shape, $size, $color) {
  
   $n1: $size+px;
@@ -57,40 +143,40 @@
 
 .corner-1 {
   transition: all 0.3s;
-  @include corners('scoop', 10, #145776);
+  @include corners('scoop', 10, #0b1e31);
   &:after {
     transition: all 0.3s;
-    @include corners('scoop', 10, #330000);
+    @include corners('scoop', 10, #10253a);
   }
   &:hover {
-    @include corners('scoop', 27, #7F8891);
-    &:after { @include corners('scoop', 27, #330000); }
+    @include corners('scoop', 27, #9B8718);
+    &:after { @include corners('scoop', 27, #10253a); }
   }
 }
 
 .corner-2 {
   transition: all 0.3s;
-  @include corners('bevel', 16, #145776);
+  @include corners('bevel', 16, #0b1e31);
   &:after {
     transition: all 0.3s;
-    @include corners('bevel', 16, #003300);
+    @include corners('bevel', 16, #10253a);
   }
   &:hover {
-    @include corners('bevel', 40, #7F8891);
-    &:after { @include corners('bevel', 40, #003300); }
+    @include corners('bevel', 40, #9B8718);
+    &:after { @include corners('bevel', 40, #10253a);}
   }
 }
 
 .corner-3 {
   transition: all 0.3s;
-  @include corners('notch', 5, #145776);
+  @include corners('notch', 5, #0b1e31);
   &:after {
     transition: all 0.3s;
-    @include corners('notch', 5, #002266);
+    @include corners('notch', 5, #10253a);
   }
   &:hover {
-    @include corners('notch', 15, #7F8891);
-    &:after { @include corners('notch', 15, #002266); }
+    @include corners('notch', 15, #9B8718);
+    &:after { @include corners('notch', 15, #10253a); }
   }
 }
 
@@ -123,10 +209,34 @@ nav {
   text-align: center;
 }
 
-.welcome-note{
-  font-family: 'Marck Script', cursive;
-}
-
 .slogan:hover{
   background-color: #008080;
+}
+
+
+// about us page
+
+.aboutus-background {
+  background-image: url('aboutus.jpg');
+  /* background-repeat: no-repeat;*/
+  height: 350px;
+  width: 100%;
+}
+
+.aboutus-subtitle {
+  color: #0b1e31;
+  text-align: center;
+}
+
+.statement {
+  text-align: center;
+}
+
+// faq page
+
+.faq-background{
+  background-image: url('ask.jpg');
+ /* background-repeat: no-repeat;*/
+ height: 350px;
+ width: 100%;
 }
