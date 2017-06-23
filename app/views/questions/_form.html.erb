@@ -2,27 +2,27 @@
 
 <div class="col-md-6">
   <div class="form-group">
-  <input type="text" name="name" class="form-control input-box" placeholder="name ...">
+  <input type="text" name="name" class="form-control input-box" placeholder="name ..." required="required">
   </div>
 
   <div class="form-group">
-    <input type="email" class="form-control input-box" placeholder="email ..." name="email">
+    <input type="email" class="form-control input-box" placeholder="email ..." name="email" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
   </div>
 </div>
 
 <div class="col-md-6">
   <div class="form-group">
-    <input type="text" class="form-control input-box" placeholder="phone ..." name="phone">
+    <input type="tel" class="form-control input-box" placeholder="phone ..." name="phone" required="required">
   </div>
 
   <div class="form-group">
-    <input type="text" class="form-control input-box" placeholder="company website ..." name="web">
+    <input type="url" class="form-control input-box" placeholder="company website ..." name="web">
   </div>
 </div>          
 
 <div class="col-xs-12">
   <div class="form-group">
-    <textarea type="text" class="form-control contactus-textarea" name="body" placeholder="type your message ..." style="width: 445px;"></textarea>
+    <textarea type="text" class="form-control contactus-textarea" name="body" placeholder="type your message ..." style="width: 445px;" required="required"></textarea>
   </div>
   <div class="text-center">
     <button type="submit" class="w3-button w3-round-xlarge submit-button">Send</button>
