@@ -215,14 +215,21 @@ nav {
 
 
 // about us page
-
-.aboutus-background{
+.aboutus-background {
   background-image: url('aboutus.jpg');
- /* background-repeat: no-repeat;*/
- height: 350px;
- width: 100%;
+  /* background-repeat: no-repeat;*/
+  height: 350px;
+  width: 100%;
 }
 
+.aboutus-subtitle {
+  color: #0b1e31;
+  text-align: center;
+}
+
+.statement {
+  text-align: center;
+}
 
 // faq page
 

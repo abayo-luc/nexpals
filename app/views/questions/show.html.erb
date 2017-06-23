@@ -11,5 +11,46 @@
     <div class="eamil-signature"> 
     <strong>Phone: </strong><%= @question.phone %><br>
     <strong>Web:</strong><a href="<%= @question.web %>"><%= @question.web %></a>  
-    </div> 
+    </div>
+    <% if current_admin && @question.reply_status == nil || false %>
+        <button role="button" class="material-button option2" type="button" data-toggle="modal" data-target="#<%=@question.id%>Modal" title="Reply Question">
+          <span class="fa fa-envelope-o" aria-hidden="true"></span>
+        </button>
+    <% elsif @question.reply_status == true%>
+       <strong>Reply Status:</strong><button class="material-button option3" type="button" title="Question Replied">
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </button>
+    <% end %>
+
+    <!-- question reply model --> 
+        <div class="modal fade" id="<%=@question.id%>Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">
+                <% if @question.subject %>
+                  <p><strong>To:</strong> <%= @question.email %></p>
+                  <p><strong>Subject:</strong> <%= @question.subject %></p>
+                <% else %>
+                <p><strong>To:</strong> <%= @question.email %></p>
+                <strong>Subject:</strong> Question Reply 
+                <% end %>
+                </h4>
+              </div>
+              <%= javascript_include_tag Ckeditor.cdn_url %>
+              <%= form_for @question do |f|%>
+              <div class="modal-body">
+                  <%=f.cktext_area :reply, name:"reply", :class => 'ckeditor'%>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <%= f.submit value:"Save Changes", class: "btn btn-primary"%>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+   <!--  end of model -->
+
   </div>

@@ -1,5 +1,5 @@
 <div class="row">
-  
+
   <!-- Carousel -->
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
     <!-- Indicators -->
@@ -37,136 +37,60 @@
   
 
   <div class="col-md-9">
-  <div class="text-center">
-    
-    <h1 class="text-center" style="color: white;"><b>Testimonies</b></h1>
-    
-    <div class="col-md-12">
-
-    <div class="col-md-5 thumbnail" style="margin: 20px; box-shadow: 10px 10px 5px grey;">
-
-    <img src="http://img.timeinc.net/time/daily/2010/1011/poy_nomination_agassi.jpg" alt="logo" class="img-responsive " style="height: 100px; width: auto; border-radius: 20%; margin: 30px; box-shadow: 10px 10px 5px grey;" align="left" />
-
-        <h4 class="name">Full Name</h4>
-        <hr>
-        <p>Short Bio</p>
-        <a href="" class="btn btn-default">Watch</a>
-        
-    </div>
-
-    <div class="col-md-5 thumbnail" style="margin: 20px; box-shadow: 10px 10px 5px grey;">
-
-    <img src="http://img.timeinc.net/time/daily/2010/1011/poy_nomination_agassi.jpg" alt="logo" class="img-responsive " style="height: 100px; width: auto; border-radius: 20%; margin: 30px; box-shadow: 10px 10px 5px grey;" align="left" />
-
-        <h4 class="name">Full Name</h4>
-        <hr>
-        <p>Short Bio</p>
-        <a href="" class="btn btn-default">Watch</a>
-        
-    </div>
-
-    
-
-    </div>
-
-       <div class="col-md-12">
-
-    <div class="col-md-5 thumbnail" style="margin: 20px; box-shadow: 10px 10px 5px grey;">
-
-    <img src="http://img.timeinc.net/time/daily/2010/1011/poy_nomination_agassi.jpg" alt="logo" class="img-responsive " style="height: 100px; width: auto; border-radius: 20%; margin: 30px; box-shadow: 10px 10px 5px grey;" align="left" />
-
-        <h4 class="name">Full Name</h4>
-        <hr>
-        <p>Short Bio</p>
-        <a href="" class="btn btn-default">Watch</a>
-        
-    </div>
-
-    <div class="col-md-5 thumbnail" style="margin: 20px; box-shadow: 10px 10px 5px grey;">
-
-    <img src="http://img.timeinc.net/time/daily/2010/1011/poy_nomination_agassi.jpg" alt="logo" class="img-responsive " style="height: 100px; width: auto; border-radius: 20%; margin: 30px; box-shadow: 10px 10px 5px grey;" align="left" />
-
-        <h4 class="name">Full Name</h4>
-        <hr>
-        <p>Short Bio</p>
-        <a href="" class="btn btn-default">Watch</a>
-        
-    </div>
-
-    
-
-    </div>
-
-  </div>
-  </div>
-
-  
-
-  <!-- media feeds -->
-  <div class="col-md-2 thumbnail" 
-  style="
-  background-color: #B0C4DE;
-  box-shadow: 10px 10px 5px grey;
-  margin-top: 90px;
-  margin-left: 10px;
-  width: 300px;">
-
-
-  <div class="thumbnail" style="background-color: #a9cce3">
     <div class="text-center">
-      <h4 class="name" style="color: #008080"><b>Media Feeds</b></h4>
 
+      <h1 class="text-center page-title"><b>Testimonies</b></h1>
+
+
+
+
+      <div class="col-md-12">
+
+        <!-- Active box -->
+        <% 4.times do || %>
+        <div class="col-xs-12 col-md-5 thumbnail work-app-box" style="background-color: #F1F5F5;">
+          <div class="col-md-4 col-xs-5">
+            <img src="http://img.timeinc.net/time/daily/2010/1011/poy_nomination_agassi.jpg" alt="person's image" class="app-image">
+            <h4><b>Full Name</b></h4>
+          </div>
+          <div class="caption col-md-8 col-xs-7 app-description">
+            <p><b>Brief Bio: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</b></p>
+
+            <hr>
+
+            <p>Summary of what he said:Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+          </div>
+
+          <!-- Trigger the modal with a button -->
+          <button type="button" class="w3-button w3-round-xlarge edit-button" data-toggle="modal" data-target="#Modal">Watch</button>
+
+        </div>
+        <%end%>
+
+        <!-- Modal -->
+        <div id="Modal" class="modal fade" role="dialog">
+          <div class="modal-dialog video-box">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+              </div>
+              <div class="modal-body">
+
+                <iframe class="video-size" src="https://www.youtube.com/embed/XGSy3_Czz8k">
+                </iframe>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
-
-  <div class="thumbnail" style="background-color: #a9cce3; height: 160px; overflow: auto;">
-    <a href="https://www.facebook.com/Plante.Josh"> <i class=" fa fa-facebook"> Facebook </i> </a>
-    <hr size="100">
-
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-
-  </div>
-  <div class="thumbnail" style="background-color: #a9cce3; height: 160px; overflow: auto;">
-    <a href="https://twitter.com/plantejosh1"> <i class="fa fa-twitter"> Twitter  </i> </a>
-    <hr>
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p>
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-  </div> 
-
-
-  <div class="thumbnail" style="background-color: #a9cce3; height: 160px; overflow: auto;">
-    <p> <b></b> Magazines </b></p> 
-    <hr>
-
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-    <p class="name" style="font-size: 10px">Notifications</p> 
-
-  </div>
-</div>
-
-
+  
+  <!-- media feeds -->
+  <%= render "pages/media" %>
 </div>

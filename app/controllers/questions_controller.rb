@@ -1,7 +1,9 @@
 class QuestionsController < ApplicationController
-  before_action :authenticate_user!, except: [:new, :create]
+  before_action :authenticate_admin, only:[:edit, :update, :destroy]
+  before_action :authenticate_user, except: [:new, :create]
   def index
-    @questions = Question.all
+    @questions = Question.where(reply_status:false || nil).paginate(:page => params[:page], :per_page => 6).order(created_at: "DESC")
+    @repliedQuestions = Question.where(reply_status:true).paginate(:page => params[:page], :per_page => 6).order(created_at: "DESC")
   end
   def show
     find_question
@@ -15,7 +17,8 @@ class QuestionsController < ApplicationController
       :email=>params[:email],
       :body=>params[:body], 
       :phone=>params[:phone], 
-      :web=>params[:web])
+      :web=>params[:web],
+      :reply_status => 'false')
     if question.save
       flash[:success] = "Question was successfully sent"
       redirect_to :back
@@ -28,7 +31,8 @@ class QuestionsController < ApplicationController
   end
   def update
     find_question
-      if @question.update(question_params)
+        @question.assign_attributes(reply: params[:reply], reply_status: true)
+      if @question.save
         @question.change_reply_status
         QuestionMailer.question_reply(@question).deliver_now
         flash[:success] = "Question Replied"

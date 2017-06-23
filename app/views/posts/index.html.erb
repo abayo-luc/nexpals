@@ -29,7 +29,9 @@
         <div id="my-posts">
            <%= render "post" %>
         </div>
-        <%= will_paginate @posts %> 
+        <div class="col-xs-12 col-md-7"> 
+        <center><small><%= will_paginate @posts, renderer: BootstrapPagination::Rails %></small></center>
+        </div>
         <div class="loader"></div>  
 
 

@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user, except: [:index, :show]
    # impressionist actions: [:show], unique: [:session_hash]
    
   def index
@@ -10,7 +10,7 @@ class PostsController < ApplicationController
         format.js
       end
     else
-      @posts = Post.paginate(:page => params[:page], :per_page => 2).order(created_at: "DESC")
+      @posts = Post.paginate(:page => params[:page], :per_page => 5).order(created_at: "DESC")
       respond_to do |format|
         format.html
         format.js
@@ -33,6 +33,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    p@post.assign_attributes(user_id: current_user.id)
     if @post.save
       
       flash[:success] = "Posted Created"

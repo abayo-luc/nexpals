@@ -47,7 +47,11 @@
         <hr>
         
         <!-- article info -->
-        <p style="text-align: right;font-size: 11px;"> Author(Full Name)</p>
+        <% if @post.user %>
+        <p style="text-align: right;font-size: 11px;"> Published by <%= @post.user.name %></p>
+        <% else %>
+        <p style="text-align: right;font-size: 11px;"> Published by NexPals</p>
+        <% end %>
         <p style="text-align: right; font-size: 11px;"> <%= Time.at(@post.created_at).strftime("%B %e, %Y") %>
           <%= social_share_button_tag("#{@post.title}") %>
         </p>
