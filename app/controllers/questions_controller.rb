@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
-  before_action :authenticate_user!, except: [:new, :create]
   before_action :authenticate_admin, only:[:edit, :update, :destroy]
+  before_action :authenticate_user, except: [:new, :create]
   def index
     @questions = Question.where(reply_status:false || nil).paginate(:page => params[:page], :per_page => 6).order(created_at: "DESC")
     @repliedQuestions = Question.where(reply_status:true).paginate(:page => params[:page], :per_page => 6).order(created_at: "DESC")
