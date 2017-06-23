@@ -20,9 +20,9 @@
       </div>
     </div>
   </div>
-
+  
     <div class="row"> 
-      <div class="col-xs-12 col-md-2 thumbnail" style="margin-top: 20px; box-shadow: 10px 10px 5px grey; background-color: #B0C4DE; margin-right: 10px">
+      <div class="col-xs-12 col-md-2 thumbnail" style="background-color: #B0C4DE; box-shadow: 10px 10px 5px grey; margin-right: 10px; margin-top: 20px"">
 
         <h3 class="text-center" style="color: #008080;"> Recent Posts </h3>
 
@@ -43,12 +43,17 @@
         background-color: #ffffff;">
         <h2 class="text-center" style="color: #008080;"><%= @post.title %></h2> <hr>
 
-
         <p style="padding: 20px;"><%= @post.body.html_safe %></p>
         <hr>
         
         <!-- article info -->
-        <p style="text-align: right;font-size: 11px;"> Published by <%= current_user.posts.name%> </p>
+
+        <% if @post.user %>
+        <p style="text-align: right;font-size: 11px;"> Published by <%= @post.user.name %></p>
+        <% else %>
+        <p style="text-align: right;font-size: 11px;"> Published by NexPals</p>
+        <% end %>
+
         <p style="text-align: right; font-size: 11px;"> <%= Time.at(@post.created_at).strftime("%B %e, %Y") %>
           <%= social_share_button_tag("#{@post.title}") %>
         </p>

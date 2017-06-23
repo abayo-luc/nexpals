@@ -1,7 +1,7 @@
 <%= form_tag "/news_letters" do %>
     <div class="col-xs-8 col-md-8">
         <div class="input-prepend form-group"><span class="add-on"><i class="icon-envelope"></i></span>
-            <input class="form-control" type="text" id="" name="email" placeholder="type email to subcribe to our Newsletter..." title="type email to subcribe to our Newsletter..." style="border-radius: 50px; width: 100%;">
+            <input class="form-control" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="" name="email" placeholder="type email to subcribe to our Newsletter..." title="type email to subcribe to our Newsletter..." style="border-radius: 50px; width: 100%;">
         </div>
     </div>
     <div class="col-xs-4 col-md-4">
