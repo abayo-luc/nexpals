@@ -1,79 +1,72 @@
 <div class="container-fluid">
   <div class="row">
-
-    <div class="col-md-12" style="position: relative;">
-
-    <div class="hidden-xs col-md-12" style="position: relative;">
-     <img src="<%= @post.url %>" style="height: 350px; width: 100%; opacity: 0.3; margin-right: 5px;">
-
-  
-      <div style="position: absolute; top: 100px; left: 0; width: 100%; ">
+    <div class="hidden-xs col-md-12 post-show-intro">
+      <img src="<%= @post.url %>"  class="post-show-intro">
+      <div class="post-intro-body">
 
         <h1 class="text-center"><b><%= @post.title %></b></h1>
         <div class="col-md-3"></div>
         <div class="col-md-6">
           <hr>
-          <h4 class="text-center", style="font-family: cursive; font-style: italic;"><b><%= @post.intro %></b> </h4>
+          <h4 class="text-center", ><b><%= @post.intro %></b> </h4>
         </div>
-        <div class="col-md-3"></div>
-
       </div>
     </div>
   </div>
   
-    <div class="row"> 
-      <div class="col-xs-12 col-md-2 thumbnail" style="background-color: #B0C4DE; box-shadow: 10px 10px 5px grey; margin-right: 10px; margin-top: 20px"">
+  <div class="row"> 
+    <div class="col-xs-12 col-md-2 thumbnail post-sideBar">
+      <h3 class="text-center" style="color: #008080;"> Recent Posts </h3>
 
-        <h3 class="text-center" style="color: #008080;"> Recent Posts </h3>
-
-        <% @posts.each do |post| %>
-          <div class="text-center">
-            <hr>
-            <a href="/posts/<%=post.slug%>"> <%= post.title %></a>
-            <br>
-            <p style="text-align: right; font-size: 11px;"> <%= Time.at(post.created_at).strftime("%B %e, %Y") %></p>
-          </div>
-        <% end %>
-      </div>
-
-      <div class="col-xs-12 col-md-7 thumbnail" style="
-        margin-top: 20px;
-        
-        /*box-shadow: 10px 10px 5px grey*/;
-        background-color: #ffffff;">
-        <h2 class="text-center" style="color: #008080;"><%= @post.title %></h2> <hr>
-
-        <p style="padding: 20px;"><%= @post.body.html_safe %></p>
-        <hr>
-        
-        <!-- article info -->
-
-        <% if @post.user %>
-        <p style="text-align: right;font-size: 11px;"> Published by <%= @post.user.name %></p>
-        <% else %>
-        <p style="text-align: right;font-size: 11px;"> Published by NexPals</p>
-        <% end %>
-
-        <p style="text-align: right; font-size: 11px;"> <%= Time.at(@post.created_at).strftime("%B %e, %Y") %>
-          <%= social_share_button_tag("#{@post.title}") %>
-        </p>
-        <hr>
-        
-        <% if current_user && current_user.admin %>
-          <%= link_to 'Edit', edit_post_path(@post) %>
-          <%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'} %>
-          <% end %>
-                                        
-        <div class="post-comment">
-          <div class="page-header">
-              <%= link_to "View Comment", "#", id:"my_comments"%>
-          </div>
-          <div id="comments-section"> 
-           <%= render "comments/form" %>
-          </div>  
+      <% @posts.each do |post| %>
+        <div class="text-center">
+          <hr>
+          <a href="/posts/<%=post.slug%>"> <%= post.title %></a>
+          <br>
+          <p style="text-align: right; font-size: 11px;"> <%= Time.at(post.created_at).strftime("%B %e, %Y") %></p>
         </div>
-        
-      </div>
+      <% end %>
+    </div>
+
+    <div class="col-xs-12 col-md-7 thumbnail" style="
+      margin-top: 20px;
+      
+      /*box-shadow: 10px 10px 5px grey*/;
+      background-color: #ffffff;">
+      <h2 class="text-center" style="color: #008080;"><%= @post.title %></h2> <hr>
+
+      <p style="padding: 20px;"><%= @post.body.html_safe %></p>
+      <hr>
+      
+      <!-- article info -->
+
+      <% if @post.user %>
+      <p style="text-align: right;font-size: 11px;"> Published by <%= @post.user.name %></p>
+      <% else %>
+      <p style="text-align: right;font-size: 11px;"> Published by NexPals</p>
+      <% end %>
+
+      <p style="text-align: right; font-size: 11px;"> <%= Time.at(@post.created_at).strftime("%B %e, %Y") %>
+        <%= social_share_button_tag("#{@post.title}") %>
+      </p>
+      <hr>
+      
+      <% if current_user && current_user.admin %>
+        <%= link_to 'Edit', edit_post_path(@post) %>
+        <%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'} %>
+        <% end %>
+                                      
+      <div class="post-comment">     
+        <div class="comments-button">
+          <button class="view-comments option2" type="button" id="showComments">
+            <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+          </button> 
+        </div>
+        <div class="comments" id="comments-section"> 
+         <%= render "comments/form" %>
+        </div>  
+      </div> 
+    </div>
 
     <!-- media feeds -->
       <%= render "twitter" %>

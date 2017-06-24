@@ -11,9 +11,8 @@
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Macondo+Swash+Caps" rel="stylesheet"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 <body>
-
- 
   <!-- entire navbar -->
   <div class="container-fluid myNavbar main-back-color" id="main">   
   <div class="nav navbar-nav navbar-left">
@@ -26,7 +25,6 @@
 
 
     <!-- Modal -->
-
 
     <div id="myModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
@@ -155,9 +153,7 @@
 
 </div>
 
-
-<div class="container-fluid" >
-
+<section class="container-fluid" >
   <p>
     <% flash.each do |key, value| %>
     <% alert_class = case key
@@ -170,9 +166,9 @@
      <%= value %>
      <% end %>
      <% end %>
-   </p>
- </div>
- <%= yield %>
+  </p>
+  <%= yield %>
+ </section>
 
 
  <!-- footer -->
