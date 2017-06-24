@@ -56,12 +56,16 @@
         <%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'} %>
         <% end %>
                                       
-      <div class="post-comment">
-        <div id="comments-section"> 
+      <div class="post-comment">     
+        <div class="comments-button">
+          <button class="view-comments option2" type="button" id="showComments">
+            <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+          </button> 
+        </div>
+        <div class="comments" id="comments-section"> 
          <%= render "comments/form" %>
         </div>  
-      </div>
-      
+      </div> 
     </div>
 
     <!-- media feeds -->

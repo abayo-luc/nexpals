@@ -1,13 +1,6 @@
 <div class="row">
   <div class="col-xs-12 col-md-12 " id="logout">
-    <div class="comment-tabs">
-      <ul class="nav nav-tabs" role="tablist">
-      <% if @post.comments.any? %>
-          <buton href="#comments-logout" type="button" role="tab" data-toggle="tab" class="btn btn-info btn-xm active">Comments</buton>
-      <% end %>
-          
-          <button href="#add-comment" role="tab" data-toggle="tab" class="btn btn-primary">Add comment</button>
-      </ul>    
+    <div class="comment-tabs">  
       <div class="tab-content">
         <% if @comments %>
           <div class="tab-pane active" id="comments-logout">                
@@ -29,12 +22,12 @@
                     </li>
                   <% end %>
               <% end %>
-            <%= will_paginate @comments, renderer: BootstrapPagination::Rails %>
             </ul> 
           </div>
         <% end %>
-
-        <div class="tab-pane" id="add-comment">
+        <hr>
+        <h3>Add Comment</h3>
+        <div class="comment-form">
           <div action="#" method="post" class="form-horizontal" id="commentForm" role="form"> 
             <%= form_for(@comment, url: comments_path) do |f| %>
             <% if @comment.errors.any? %>

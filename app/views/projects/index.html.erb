@@ -38,13 +38,16 @@
   <div class="col-md-10">
     <h1 class="text-center page-title"><b>Our Work</b></h1>
 
-     <buton href="#comments-logout" type="button" role="tab" data-toggle="tab" class="btn btn-info btn-xm active">Comments</buton>
-    <button href="#add-comment" role="tab" data-toggle="tab" class="btn btn-primary">Add comment</button>
+<!--  set these button so that one button disply nexpals project and another one taggle to disply customer project -->
+     <buton type="button" role="tab" data-toggle="tab" class="btn btn-info btn-xm active" id="showNex">NexPals</buton>
+    <button role="tab" data-toggle="tab" class="btn btn-primary" id="showCust">Customer</button>
+
+    
   </div>
 
 
   <div class="col-md-12">
-    <div class="col-md-12 text-center">
+    <div class="col-md-12 text-center customer-proj" id="customerPro">
       <h2><b>Customers</b></h2>
       <% 4.times do || %>
       <div class="col-xs-12 col-md-5 thumbnail work-app-box">
@@ -61,7 +64,7 @@
     </div>
 
 
-    <div class="col-md-12 text-center" >
+    <div class="col-md-12 text-center nexPro" id="nexPals-proj" >
       <h2><b>NexPals</b></h2>
       <hr>
       <% 4.times do || %>
