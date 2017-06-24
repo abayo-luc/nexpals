@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user, except: [:index, :show]
    # impressionist actions: [:show], unique: [:session_hash]
+   respond_to :html, :js
    
   def index
     if params[:tag]
