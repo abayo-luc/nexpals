@@ -1,31 +1,41 @@
-<%= form_tag "/questions", class: "navbar-form", method: :post do %>
-
-<div class="col-md-6">
-  <div class="form-group">
-  <input type="text" name="name" class="form-control input-box" placeholder="name ..." required="required">
-  </div>
-
-  <div class="form-group">
-    <input type="email" class="form-control input-box" placeholder="email ..." name="email" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-  </div>
-</div>
-
-<div class="col-md-6">
-  <div class="form-group">
-    <input type="tel" class="form-control input-box" placeholder="phone ..." name="phone" required="required">
-  </div>
-
-  <div class="form-group">
-    <input type="url" class="form-control input-box" placeholder="company website ..." name="web">
-  </div>
-</div>          
-
-<div class="col-xs-12">
-  <div class="form-group">
-    <textarea type="text" class="form-control contactus-textarea" name="body" placeholder="type your message ..." style="width: 445px;" required="required"></textarea>
-  </div>
-  <div class="text-center">
-    <button type="submit" class="w3-button w3-round-xlarge submit-button">Send</button>
-  </div>
-</div>
+<%= form_tag "/questions", class: "form-horizontal", method: :post do %>
+  <fieldset>
+    <legend>Legend</legend>
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Name</label>
+      <div class="col-lg-10">
+        <input class="form-control" id="inputEmail" placeholder="Name" type="text" required="required" name="name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+      <div class="col-lg-10">
+        <input class="form-control" id="inputEmail" placeholder="Email" type="email" required="required" name="email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword" class="col-lg-2 control-label">Phone</label>
+      <div class="col-lg-10">
+        <input class="form-control" id="inputPassword" placeholder="078...." type="integer" name="phone">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="textArea" class="col-lg-2 control-label">Type your question!</label>
+      <div class="col-lg-10">
+        <textarea class="form-control" rows="3" id="textArea" name="body"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Web Address</label>
+      <div class="col-lg-10">
+        <input class="form-control" id="inputEmail" placeholder="www.yourweb.com" type="url" name="web">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
 <% end %>
