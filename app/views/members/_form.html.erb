@@ -1,9 +1,6 @@
 <%= form_for @member, :html => {:multipart => true} do |f| %>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
-  <br>
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
   <br>
   <%= f.label :phone %>
   <%= f.text_field :phone %>
@@ -15,7 +12,7 @@
   <%= f.text_field :location %>
   <br>
   <%= f.label :short_bio %>
-  <%= f.text_field :short_bio %>
+  <%= f.cktext_area :short_bio, :class => 'ckeditor'%>
   <br>
   <%= f.label :title %>
   <%= f.text_field :title %>

@@ -1,17 +1,17 @@
 <div class="container-fluid">
-  <%= @member.first_name %>
+  <%= @member.name%>
   <br>
-  <%= @member.last_name %>
+  <img src="<%= @member.photo %>"/><br>
   <br>
-  <%= @member.title %>
+  <%= @member.title %><br>
   <br>
-  <%= @member.email %>
+  <%= @member.email %><br>
   <br>
-  <%= @member.phone %>
+  <%= @member.phone %><br>
   <br>
-  <%= @member.location %>
+  <%= @member.location %><br>
   <br>
-  <%= @member.short_bio %>
+  <%= @member.short_bio.html_safe %><br>
 </div>
 <%= link_to "Edit", edit_member_path(@member) %>
-<%= link_to "Remove", member_path(@member), method: :delete, data: {confirm: "Are you sure you want to remove #{@member.first_name}?"} %>
+<%= link_to "Remove", member_path(@member), method: :delete, data: {confirm: "Are you sure you want to remove #{@member.name}?"} %>

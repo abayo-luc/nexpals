@@ -43,9 +43,9 @@ class MembersController < ApplicationController
 
   private
     def find_member
-      @member = Member.find_by(id: params[:id])
+      @member = Member.friendly.find(params[:id])
     end
     def member_params
-      params.require(:member).permit(:first_name, :last_name, :phone, :title, :email, :short_bio, :location, :photo)
+      params.require(:member).permit(:name, :phone, :title, :email, :short_bio, :location, :photo)
     end
 end

@@ -71,8 +71,7 @@
         </div>
 
         <div class="col-xs-12 col-sm-9 text-center">
-         
-          <span class="name"> <b><%= member.first_name%> <%= member.last_name %></b> | <%= member.title %> </span> <br>
+          <span class="name"> <b> <%= link_to "#{member.name}", member%></span><br>
           
           <span class="glyphicon glyphicon-map-marker text-muted c-info" data-toggle="tooltip" title="<%= member.location %>" style="cursor:pointer"></span>
           <span class="visible-xs"> <span class="text-muted"><%= member.location %></span><br/></span>
@@ -85,7 +84,7 @@
          
            <br>
            <br> 
-          <p> <%= member.short_bio %></p> <br>
+          <p> <%= member.short_bio.html_safe %></p> <br>
 
         </div>
         <div class="clearfix"></div>
