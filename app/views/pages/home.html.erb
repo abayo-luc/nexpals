@@ -1,30 +1,83 @@
-<style> 
-  .myNavbar { display: none }
-  .myFooter { display: none }
-</style>
 
-
-<div class="home-background">
-  <div class="col-md-9">
-    <br><br> <br> <br> <br> <br> <br>
-    <p class="text-center welcome-note">Welcome to NexPals,</p>
-    <br>
-    <h1 class="text-center hook1"><b>Just Dream it!!</b></h1>
-    <h2 class="text-center hook2">We'll do the magic with web Development</h2>
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="https://4zeuaq.bn1301.livefilestore.com/y4mhXWZcRyyEqcvpm358kcvYT8cWFc2NJQyopCwKtZBRrH32BgoyhkisEEOjHz126SdF5_ehXJnFAMTQ64VdrkurwwHArQvF9FWKXGPck2xw1zpKBojc8HOrDAJzzHoN0ePwuD345iNZUeQGh4MXB_8iwEIxVzsLv-kkeCGGf54ghf88MTIkNoOxfltxxDpI73-j_yECMz46sLwFbp9vKCAuw?width=741&height=186&cropmode=none" style="width:100%" class="img-responsive">
+      <div class="container">
+        <div class="carousel-caption">
+          <p><a class="btn-gradient cyan mini" href="/aboutus">More</a>
+        </p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://p2fumq.bn1301.livefilestore.com/y4mFeJ8agFPhJmUNKPGazaibdfVED4IQP2_2EJIL-fvxJ9iA8ljk-H3s0nugNKlsODjB6DtBY3xbRNXoRUZ3c4ZQXYn8YjZdRAz1oRj85roEnIE1iNxffc4Et92meSKCfUJhpeP52gP8yumg2TxcVXU6hAEgIUr-k4_7K6ucsXZYCZbRaPvOzAK2hPVW9eEnf3KviS53e0p4Aiinx1HVEd1bQ?width=3397&height=1500&cropmode=none" style="width:100%" class="img-responsive">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Nex Team</h1>
+          <p><a class="btn-gradient cyan mini" href="/members">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://pwfumq.bn1301.livefilestore.com/y4mXdsu0jhnMMxIZUSKyEBs4f3aO85iHVWbC7kOGZCzn12VNFAdvBhIshS-ycVf4MhOXxjCVwpq-pwcpYeHZj1cHYdBzwuvN5-OXFeAfDTDMPvhJIIBY_NvSf1EdUcGPa5Qd8xbQ4aHXUNCBd_CBPUsHDgZxDvqAZzKzQ190FOb9UR1MG88y0Is-Yx7K9QfcVW-SUa7PxfbQuLQzZwFFaCAKg?width=670&height=328&cropmode=none" style="width:100%">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Nex Blog</h1>
+          <p>With Nex Blog, now you can read most recent news about and learn more pending technologies in computer programming!</p>
+          <p><a class="btn-gradient cyan mini" href="/posts">Browse Blog</a></p>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="col-md-3" style="margin-top: 100px;">
-   <nav> 
-    <ul">
-     <a href="/posts" class="btn corner-2 home-button">Blog</a> <br>
-     <a href="/projects" class="btn corner-3 home-button">Projects</a> <br>
-     <a href="/services" class="btn corner-1 home-button">Services</a> <br>
-     <a href="/aboutus" class="btn corner-2 home-button">About Us</a> <br>
-     <a href="/contactus" class="btn corner-3 home-button">Contact Us</a> <br>
-     <% if current_user %>
-      <%= link_to "Sign Out", "/users/sign_out", method: "delete", class:"btn corner-3 home-button" %>
-     <% end %>
-    </ul>
-   </nav>
- </div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="icon-prev"></span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="icon-next"></span>
+  </a>  
 </div>
+<!-- /.carousel -->
+
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <img class="img-circle" src="https://rnaiig.bn1301.livefilestore.com/y4mkjMl_VlQ-vd2RbX03_q6BdijIqN0s4OgzPI_vE5S9Eg96ztakqTSS0OM7G9QsgkkfSTl0KO7UxWHLOpDGmylU4D9hj9gY5XueM6FxgG2SB9v2-rrIFsj3QNAamrxepfHatqHBpUREyV5bAT_VLs4gKo8SJgoMoHqv2O2NQ9Nw8j5vhHtiksWfvGiSpkOZmltpURcxuN4EXoQnNxUfywkYg?width=660&height=609&cropmode=none">
+      <h2>Work with Us</h2>
+      <p>NexPals quickly and efficiently build your website and application from the scratch with Ruby on Rails, HTML, CSS, JavaScrip (jQuery, react, and angular js). Get a responsive web application and access it on any device: PC, phones, and tablets.</p>
+      <p><a class="btn-gradient cyan mini" href="/services">View details »</a></p>
+    </div>
+    <div class="col-md-4 text-center">
+      <img class="img-circle" src="https://pmfumq.bn1301.livefilestore.com/y4mE-_9oIytP-WI_IWMpfelDHVytKpMpO1Tgm-I8agxZNyjH1RRXT6FXShsq1h-Rok2OkojjLBqQCnHTVoPEZ1qpItFvfZaj4w6qjc-dBvwlgL9jfxjNz3knKLrFgNJRma1gI7JJKz96C0osfWgpe0jHXirlrcSNZS8LUmNRHcwzDqPfib-t58VlhgFe5MC8qAV_pG3ToKtRR_3iuyFdUhphg?width=250&height=250&cropmode=none">
+      <h2>Direct Line</h2>
+      <p><strong>Email:</strong> nexpals@gmail.com</p>
+      <p><strong>Phone:</strong> +250787914666</p>
+      <p><a class="btn-gradient cyan mini" href="/contactus">View details »</a></p>
+    </div>
+    <div class="col-md-4 text-center">
+      <img class="img-circle" src="<%= @post.url %>">
+      <h2>Nex Blog</h2>
+      <p><%= truncate @post.intro.html_safe, length: 350%></p>
+      <p><%= link_to 'View details', @post, class: "btn-gradient cyan mini"%></p>
+    </div>
+  </div><!-- /.row -->
+
+<!-- postTimeLine -->
+
+</div><!-- /.container -->
