@@ -17,13 +17,7 @@
 
 
 html, body { 
-/*background-color: #D8DDE1;*/
-padding-left: 1px;
-padding-right: 1px;
-padding-top: 1px;
-padding-bottom: 80px; 
-height: 100%;
-background-color: #D8DDE1;
+background-color: white;
 font-family: 'Quicksand', sans-serif;
 }
 img {
