@@ -93,7 +93,6 @@ GEM
       activerecord (>= 4.0.0)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
-    google-analytics-rails (1.1.0)
     haml (5.0.1)
       temple (>= 0.8.0)
       tilt
@@ -275,7 +274,6 @@ DEPENDENCIES
   devise
   dotenv-rails
   friendly_id (~> 5.1.0)
-  google-analytics-rails (= 1.1.0)
   informant-rails
   jbuilder (~> 2.5)
   jquery-rails
