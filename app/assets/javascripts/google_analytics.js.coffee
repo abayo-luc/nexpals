@@ -1,4 +1,4 @@
-class @GoogleAnalytics
+/*class @GoogleAnalytics
 
   @load: ->
 
@@ -45,4 +45,4 @@ class @GoogleAnalytics
     # your google analytics ID(s) here...
     'UA-102034694-1'
 
-GoogleAnalytics.load()
+GoogleAnalytics.load()*/

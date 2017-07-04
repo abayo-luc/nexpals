@@ -84,3 +84,6 @@ gem 'mini_magick', '~> 4.7'
 #admin dashboard
 gem 'rails_admin'
 gem 'devise'
+
+# google analytic
+gem 'google-analytics-rails', '1.1.0'

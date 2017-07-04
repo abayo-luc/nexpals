@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Macondo+Swash+Caps" rel="stylesheet"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= favicon_link_tag 'http://res.cloudinary.com/nexpals/image/upload/v1498737192/Nex-Pals-logo3_iifsxy.jpg' %>
+  <%= analytics_init if GoogleAnalytics.valid_tracker? %>
 </head>
 <body>
   <!-- entire navbar -->
