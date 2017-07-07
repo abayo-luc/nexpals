@@ -84,3 +84,5 @@ gem 'mini_magick', '~> 4.7'
 #admin dashboard
 gem 'rails_admin'
 gem 'devise'
+
+gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', :require => 'bootstrap-rails'
