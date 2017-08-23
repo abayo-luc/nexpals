@@ -17,13 +17,13 @@ class QuestionsController < ApplicationController
       :email=>params[:email],
       :body=>params[:body], 
       :phone=>params[:phone], 
-      :web=>params[:web],
+      # :web=>params[:web],
       :reply_status => 'false')
     if question.save
       flash[:success] = "Question was successfully sent"
-      redirect_to :back
+      redirect_to "/"
     else
-      render :new
+      redirect_to "/"
     end
   end
   def edit

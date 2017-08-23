@@ -5,13 +5,13 @@ Rails.application.routes.draw do
   get '/posts_with_button', to: 'posts#index_with_button', as: 'posts_with_button'
   
   # root 'pages#home'
-  get '/home' => "pages#home"
-  get '/aboutus' => "pages#aboutus"
-  get '/contactus' => "pages#contactus"
-  get '/testmonies' => 'testimonies#index'
-  get '/members' => 'members#index'
-  get '/projects' => "projects#index"
-  get '/services'  => 'services#index'
+  # get '/home' => "pages#home"
+  # get '/aboutus' => "pages#aboutus"
+  # get '/contactus' => "pages#contactus"
+  # get '/testmonies' => 'testimonies#index'
+  # get '/members' => 'members#index'
+  # get '/projects' => "projects#index"
+  # get '/services'  => 'services#index'
 
 
 
@@ -21,14 +21,14 @@ Rails.application.routes.draw do
   root 'pages#final'
 
 
-  resources :posts
-  get 'tags/:tag', to: 'posts#index', as: "tag"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # resources :posts
+  # get 'tags/:tag', to: 'posts#index', as: "tag"
+  # # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
-  resources :comments
-  resources :posts
-  resources :replies
-  resources :members
+  # resources :comments
+  # resources :posts
+  # resources :replies
+  # resources :members
 
   # get "/in_admin", to: 'sessions#new'
   # post "/in_admin", to: 'sessions#create'
@@ -43,5 +43,5 @@ Rails.application.routes.draw do
       get :confirm_email
     end
   end
-  resources :faqs
+  # resources :faqs
 end

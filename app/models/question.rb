@@ -1,6 +1,6 @@
 class Question < ApplicationRecord
-  validates :name, :email, :phone, presence: true 
-  validates :body, length: {minimum: 10}
+  # validates :name, :email, :phone, presence: true 
+  # validates :body
 
   def change_reply_status
     self.reply_status = true

@@ -97,9 +97,9 @@ $(function(){
   $(function(){
     jQuery(document).ready(function() {
     $('#home').backstretch([
-       "http://res.cloudinary.com/nexpals/image/upload/v1498737192/Nex-Pals-logo3_iifsxy.jpg", 
-       "images/home-bg-slideshow2.jpg",
-        ],  {duration: 2000, fade: 750});
+       "http://res.cloudinary.com/nexpals/image/upload/v1503498252/bp_background_2_blue1_adxdbp.jpg",
+       "http://res.cloudinary.com/nexpals/image/upload/v1503508104/home-page-img_jfmwvc.png", 
+        ],  {duration: 5000, fade: 750});
     });
   })
 
