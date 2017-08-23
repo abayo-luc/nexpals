@@ -12,6 +12,15 @@ Rails.application.routes.draw do
   get '/members' => 'members#index'
   get '/projects' => "projects#index"
   get '/services'  => 'services#index'
+
+
+
+
+  get '/final' => "pages#final"
+
+
+
+
   resources :posts
   get 'tags/:tag', to: 'posts#index', as: "tag"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

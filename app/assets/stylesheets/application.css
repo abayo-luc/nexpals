@@ -18,7 +18,8 @@
 
 html, body { 
 background-color: #ececec;
-font-family: 'Quicksand', sans-serif;
+font-family: 'Cormorant SC', serif;
+font-size: 18px;
 }
 img {
   height:200px;
