@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get '/posts_with_button', to: 'posts#index_with_button', as: 'posts_with_button'
   
-  root 'pages#home'
+  # root 'pages#home'
   get '/home' => "pages#home"
   get '/aboutus' => "pages#aboutus"
   get '/contactus' => "pages#contactus"
@@ -12,6 +12,15 @@ Rails.application.routes.draw do
   get '/members' => 'members#index'
   get '/projects' => "projects#index"
   get '/services'  => 'services#index'
+
+
+
+
+  get '/final' => "pages#final"
+
+  root 'pages#final'
+
+
   resources :posts
   get 'tags/:tag', to: 'posts#index', as: "tag"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

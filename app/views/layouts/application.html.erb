@@ -8,6 +8,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'jquery', 'applicatioin' %>
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+SC" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Macondo+Swash+Caps" rel="stylesheet"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,214 +16,12 @@
 </head>
 <body>
   <!-- entire navbar -->
-  <div class="container-fluid myNavbar main-back-color" id="main">   
-  <div class="nav navbar-nav navbar-left" role="navigation">
-    <!-- Nex Webstore -->
-    
-    <!-- Trigger the modal with a button -->
-    <!-- <button  type="button" class="btn btn-info btn-lg store" data-toggle="modal" data-target="#myModal" style="" title="Nex WebStore">
-      <div class="glyphicon glyphicon-th store-trigger-button"></div>
-    </button> -->
-
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle glyphicon glyphicon-list" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/"><b>NexPals</b></a>
-    </div>
-
-
-
-    <!-- Modal -->
-
-    <div id="myModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content store-modal">
-          
-          <div class="thumbnail main-back-color" style="margin: 20px;"> 
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h1 class="modal-title text-center white"><b>Nex WebStore</b></h1>
-          </div>
-
-
-          <div class="modal-body">
-            <div class="thumbnail" style="height: 300px; overflow: scroll; margin-top: -15px;">  
-
-
-              <!-- first row -->
-              
-              <div class="col-md-4">
-                <div class="thumbnail app-box">
-                  <br>
-                  <div class="text-center glyphicon glyphicon-briefcase" style="font-size: 50px;color:#000080;">
-                  </div>
-                </div>
-                <h4 class="text-center" style="color:#000080;">250Schools</h4>
-              </div>
-
-              <!-- first row -->
-              
-              <div class="col-md-4">
-                <div class="thumbnail app-box">
-                  <br>
-                  <div class="text-center glyphicon glyphicon-briefcase" style="font-size: 50px;color:#000080;">
-                  </div>
-                </div>
-                <h4 class="text-center" style="color:#000080;">250Schools</h4>
-              </div>
-
-
-              <div class="col-md-4">
-                <div class="thumbnail app-box">
-                  <br>
-
-                  <div class="text-center glyphicon glyphicon-education" title="Education Services" style="font-size: 50px; color: #228B22;"></div>
-                </div>
-                <h4 class="text-center" style="color: #228B22;">Ikigugu</h4>
-              </div>
-
-
-              <div class="col-md-4">
-                <div class="thumbnail app-box">
-                  <br>
-                  <div class="text-center glyphicon glyphicon-lamp" title="Developping & designing Static and Dynamic Websites" style="font-size: 50px; color:    #F4A460;"></div>
-                </div>
-                <h4 class="text-center" style="color:   #F4A460;">Ibyiwacu</h4>
-
-              </div>
-
-
-              <!-- second row -->
-              <div class="col-md-4">
-
-                <div class="thumbnail app-box">
-                  <br>
-
-                  <div class="text-center glyphicon glyphicon-briefcase"
-                  style="font-size: 50px;color:#000080;">
-                </div>
-
-
-              </div>
-              <h4 class="text-center" style="color:#000080;">250Schools</h4>
-            </div>
-
-            <div class="col-md-4">
-
-              <div class="thumbnail app-box">
-                <br>
-
-
-                <div class="text-center glyphicon glyphicon-education" title="Education Services" style="font-size: 50px; color: #228B22;"></div>
-              </div>
-              <h4 class="text-center" style="color: #228B22;">Ikigugu</h4>
-            </div>
-
-            <div class="col-md-4">
-
-              <div class="thumbnail app-box">
-
-                <br>
-
-                <div class="text-center glyphicon glyphicon-lamp" title="Developping & designing Static and Dynamic Websites" style="font-size: 50px; color:    #F4A460;"></div>
-              </div>
-              <h4 class="text-center" style="color:   #F4A460;">Ibyiwacu</h4>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-<!-- hire us button -->
-    <!-- <button href="/contactus" class="w3-button w3-round-xlarge hire-us-button">Hire Us</button> -->
-    
-
-  </div>
-
-
-  <!-- navbar -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-  <ul class="nav navbar-nav navbar-right" style="padding-left: -30px;">
-
-    <li><a href="/" class="glyphicon glyphicon-home" title="home" style="color: #cdd2d5;"></a></li>
-    <li><a href="/posts"  title="Updates" style="color: #cdd2d5;"><b>Blog</b></a></li>
-    <li><a href="/services"  title="Services" style="color: #cdd2d5;"><b>Services</b></a></li>
-    <!-- <li><a href="/projects"  title="Projects" style="color: #cdd2d5;"><b>Projects</b></a></li> -->
-    <li><a href="/members"  title="Team" style="color: #cdd2d5;"><b>Team</b></a></li>
-    <li><a href="/contactus"  title="Contact Us" style="color: #cdd2d5;"><b>Contact Us</b></a></li>
-    <li><a href="/aboutus"  title="About Us" style="color: #cdd2d5;"><b>About Us</b></a></li>
-
-  </ul>
-  </div>
-
-</div>
-
-<section class="container-fluid" >
-  <p>
-    <% flash.each do |key, value| %>
-    <% alert_class = case key
-    when :notice then "success"
-    when :alert then "danger"
-    else key
-     end %>
-     <%= content_tag :div, class: "alert alert-#{alert_class}" do %>
-     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-     <%= value %>
-     <% end %>
-     <% end %>
-  </p>
+  
   <%= yield %>
  </section>
 
 
  <!-- footer -->
- 
- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
- <footer>
-   
-  <div class="footer" style="background-color: #0b1e31; padding-bottom: 0px;">
-    <div class="container-fluid myFooter">
-      <div class="row">
-       <div>
-        <!-- <div class="footer-bottom"> -->
-        <div class="col-xs-12 col-md-2 bottom-features">                  
-          <!-- <a href="#" class="black col-md-6" style="color: white;">FAQs</a> -->
-          <!-- <a href="#" class="black col-md-6" style="color: white;">Reviews</a> -->
-        </div> 
-
-        <div class=" col-xs-12 col-md-7 bottom-features">
-          <div class="col-md-12">
-            <%= render "news_letters/form" %>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-md-3">
-
-          <ul class="social">
-            <li> <a href="mailto:nexpals250@gmail.com"> <i class="fa fa-envelope-square fa-3x social"></i></a></li>
-            <li> <a href="https://www.facebook.com/nexpals/"> <i class=" fa fa-facebook"></i></a> </li>
-            <li> <a href="https://twitter.com/NexPals"> <i class="fa fa-twitter"></i></a></li>
-            <li> <a href="https://www.linkedin.com/company-beta/18130112/"> <i class="fa fa-linkedin"></i></a></li>
-            <!-- <li> <a href="#"> <i class="fa fa-youtube"></i></a></li> -->
-          </ul>
-          <br> <br>
-          <p style="color: white;"> ©NexPals 2017. All right reserved</p>
-
-        </div>
-      </div> 
-    </div>
-  </div>
-</div>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -233,7 +32,6 @@
   ga('create', 'UA-102034694-1', 'www.nexpals.com');
   ga('send', 'pageview');
 </script>
-</footer>
 
 </body>
 </html>
